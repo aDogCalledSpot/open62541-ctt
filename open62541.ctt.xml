@@ -8159,7 +8159,7 @@
             </Column>
             <Column column="1">
              <ItemData role="0" rolename="DisplayRole">
-              <Value typename="QString" type="10" data="ns=1;i=50007"/>
+              <Value typename="QString" type="10" data="ns=1;s=the.answer"/>
              </ItemData>
              <ChildRows size="0"/>
             </Column>
