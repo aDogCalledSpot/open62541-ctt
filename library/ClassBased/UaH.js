@@ -1,14 +1,17 @@
-/* Hostnames class.
-    Purpose: To simplify the querying of, and use of hostnames for testing against UA Server 
-             Certificates, particularly in FindServers and/or GetEndpoints.
-    Revision History: 
-        Apr-12-2010 NP: Initial version.
-*/
+/* "H" related class objects and helpers, including:
+        - function HostnameFromUrl( str ) 
+        - function getHostnameFromUrn( str )
+        - Hostnames object, including:
+            - QueryHostnames = function( host )
+            - QueryHostnames( hostname )
+            - Contains = function( hostname )*/
 
-// Create a single instance of this helper. We will only ever need one.
+
 var HOSTNAMES;
 if( HOSTNAMES == null ) HOSTNAMES = new Hostnames();
 
+/* Purpose: To simplify the querying of, and use of hostnames for testing against UA Server 
+            Certificates, particularly in FindServers and/or GetEndpoints. */
 function Hostnames( hostname ) {
     this.Host;            // the computer that was last queried
     this.Hostnames = [];  // the hostnames (string array)
@@ -46,11 +49,38 @@ function Hostnames( hostname ) {
 }// Hostnames class
 
 
-/* Test code
-print( "hostnames: " + HOSTNAMES.Hostnames );
-var validTest = [ "nate-laptop", "localhost", "opc-laptop", "opc-123", "opc123opc", "123opc" ];
-var invalidTest = [ "not-me", "123.456", "abc.def" ];
-for( var v=0; v<validTest.length; v++ )
-    {print( "value '" + validTest[v] + "' exist? " + HOSTNAMES.Contains( validTest[v] ) );}
-for( var i=0; i<invalidTest.length; i++ )
-    {print( "value '" + invalidTest[i] + "' exist? " + HOSTNAMES.Contains( invalidTest[i] ) );}*/
+
+/*  Retrieves the HOSTNAME from a URL
+    Parameters:
+        str = the URL to parse.
+    Example URLs:
+        opc.tcp://localhost:51210
+        http://localhost:51211
+        opc.tcp://localhost:51210/UA/SampleServer */
+function HostnameFromUrl( str ) {
+    if( str == undefined || str == null || str == "" ) return( "" );
+    var re = new RegExp( '^(?:opc.tcp|http)(?:s)?\://([^/]+):', 'im' );
+    var matches = str.match( re );
+    if( matches !== null && matches.length !== undefined && matches.length > 0 ) return matches[1];
+    else return( "" );
+}
+
+
+
+/*  Retrieves the HOSTNAME from a URN
+    Parameters:
+        str = the URL to parse.
+    Example URNs:
+        urn:localhost:OPCFoundation:SampleServer */
+function getHostnameFromUrn( str ) {
+    if( str == undefined || str == null || str == "" ) return( "" );
+    var indexOfColon = str.indexOf( ":" );
+    if( indexOfColon > 0 ) {
+        var urnSplit = str.split( ":" );
+        if( urnSplit !== null && urnSplit.length >= 3 ) {
+            // we'll assume that the 2nd value in the Urn is the hostname because the first is the "urn:" prefix.
+            return( urnSplit[1] );
+        }
+    }
+    return( "" );
+}

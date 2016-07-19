@@ -8,14 +8,14 @@ function DoSAttempt( args ) {
     if( !isDefined( args.MessageSecurityMode ) ) throw( "DoSAttempt.args.MessageSecurityMode not specified." );
     var result = true;
     var maxChannels = readSetting( "/Server Test/Capabilities/Max SecureChannels" );
-    if( maxChannels < 10 ) { addSkipped( "Default Value for MaxSecureChannels setting is 10. Please check settig: " + "/Server Test/Capabilities/Max SecureChannels" + "." ); return (result);}
-    if( maxChannels === 0 || maxChannels > 50 ) maxChannels = 50; // 50 is the current MAX of the CTT, if the setting is not configured (default=0, to force configuration).
+    if( maxChannels < 10 && maxChannels != 0 ) { addSkipped( "Default Value for MaxSecureChannels setting is 10. Please check setting: /Server Test/Capabilities/Max SecureChannels" ); return (result);}
+    if( maxChannels === 0 || maxChannels > 100 ) maxChannels = 100; // 100 is the current MAX of the CTT, if the setting is not configured (default=0, to force configuration).
     addLog( "Creating " + maxChannels + " SecureChannel(s)" );
 
     // the test-case states that a 1-second delay should be added between each new SecureChannel.
     // if we do that, then large systems could take a long time to execute. So lets add the delay ONLY
     // if the # of secure channels is 10 or less
-    var waitTime = maxChannels <= 10? 1000 : 0;
+    var waitTime = maxChannels <= 10? 100 : 50;
 
     // step 1: create the max # of supported channels (according to the following CTT setting)
     addLog( "Step 1: Create " + maxChannels + " SecureChannels. All expected to succeed." );

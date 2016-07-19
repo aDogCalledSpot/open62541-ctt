@@ -7,4 +7,4 @@ include( "./library/ServiceBased/Helpers.js" );
 
 
 // Connect to the server 
-if( !Test.Connect() ) stopCurrentUnit();
+if( !Test.Connect( { SkipCreateSession: true } ) ) stopCurrentUnit();

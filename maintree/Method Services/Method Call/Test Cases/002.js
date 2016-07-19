@@ -23,11 +23,11 @@ function methodCallTest() {
                     OperationResults: [ new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadNoMatch ] ),
                                         new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadNoMatch ] ) ] } ) ) {
         if( Assert.Equal( 2, TranslateBrowsePathsToNodeIdsHelper.Response.Results.length, "2 TranslateBrowsePathsToNodeIds Results expected." ) ) {
-            if( Assert.GreaterThan( 0, TranslateBrowsePathsToNodeIdsHelper.Response.Results[0].Targets.length, "TranslateBrowsePathsToNodeIdsHelper.Response[0].Targets expected." ) ) {
+            if( Assert.GreaterThan( 0, TranslateBrowsePathsToNodeIdsHelper.Response.Results[0].Targets.length, "TranslateBrowsePathsToNodeIdsHelper.Response[0].Targets expected when reading INPUT arguments." ) ) {
                 paramInNodeId = MonitoredItem.fromNodeIds( TranslateBrowsePathsToNodeIdsHelper.Response.Results[0].Targets[0].TargetId.NodeId )[0];
             }
-            if( Assert.GreaterThan( 0, TranslateBrowsePathsToNodeIdsHelper.Response.Results[1].Targets.length, "TranslateBrowsePathsToNodeIdsHelper.Response[1].Targets expected." ) ) {
-                paramOutNodeId = MonitoredItem.fromNodeIds( TranslateBrowsePathsToNodeIdsHelper.Response.Results[0].Targets[1].TargetId.NodeId )[0];
+            if( !Assert.Equal( 0, TranslateBrowsePathsToNodeIdsHelper.Response.Results[1].Targets.length, "TranslateBrowsePathsToNodeIdsHelper.Response[1].Targets expected when reading OUTPUT arguments." ) ) {
+                paramOutNodeId = MonitoredItem.fromNodeIds( TranslateBrowsePathsToNodeIdsHelper.Response.Results[1].Targets[0].TargetId.NodeId )[0];
             }
         }
         else result = false;
@@ -60,4 +60,4 @@ function methodCallTest() {
     return( result );
 }
 
-Test.Execute( { Procedure: methodCallTest } );
+Test.Execute( { Debug: true, Procedure: methodCallTest } );

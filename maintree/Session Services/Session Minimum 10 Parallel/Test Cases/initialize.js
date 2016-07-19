@@ -11,7 +11,7 @@ include( "./library/Base/SettingsUtilities/NodeIds.js" );
 include( "./library/ServiceBased/SubscriptionServiceSet/Publish.js" );
 include( "./library/ServiceBased/MonitoredItemServiceSet/DeleteMonitoredItems.js" );
 
-if( !Test.Connect() ) stopCurrentUnit();
+if( !Test.Connect( { SkipCreateSession: true } ) ) stopCurrentUnit();
 
 // create and configure PkiProvider 
 var g_pkiProvider = new UaPkiUtility();

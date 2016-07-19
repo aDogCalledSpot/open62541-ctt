@@ -108,25 +108,21 @@ UaResponseHeader.IsValid = function( args ) {
     var currentClientTime = UaDateTime.utcNow(); // get current time to validate the timestamp
 
     // TEST 1: ServiceResult
-    if( !args.Service.Response.ResponseHeader.ServiceResult.isGood() ) {
-        // did the Service fail with a NOT SUPPORTED? if so, register it.
-        if( args.Service.Response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadNotImplemented || args.Service.Response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadServiceUnsupported ) {
-            if( !args.SuppressWarnings ) addNotSupported( args.Service.Name + " not implemented." );
-            ServiceRegister.SetNotSupported( { Name: args.Service.Name } );
-            result = false;
-            return( result );
-        }
-        else {
-            // Expected service result?
-            if( isDefined( args.ServiceResult ) ) {
-                if( !args.ServiceResult.containsStatusCode( args.Service.Response.ResponseHeader.ServiceResult ) ) result = false;
-                if( !result && !args.SuppressErrors ) addError( args.Service.Name + ".Response.ResponseHeader.ServiceResult: " + args.Service.Response.ResponseHeader.ServiceResult + "; but " + args.ServiceResult.toString() );
-            }
-            else if( args.Service.Response.ResponseHeader.ServiceResult.isBad() ) {
-                if( !args.SuppressErrors ) addError( args.Service.Name + ".Response.ResponseHeader.ServiceResult is Bad: " + args.Service.Response.ResponseHeader.ServiceResult, args.Service.Response.ResponseHeader.ServiceResult );
-                result = false;
-            }
-        }
+    // did the Service fail with a NOT SUPPORTED? if so, register it.
+    if( args.Service.Response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadNotImplemented || args.Service.Response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadServiceUnsupported ) {
+        if( !args.SuppressWarnings ) addNotSupported( args.Service.Name + " not implemented." );
+        ServiceRegister.SetNotSupported( { Name: args.Service.Name } );
+        result = false;
+        return( result );
+    }
+    // Expected service result?
+    if( isDefined( args.ServiceResult ) ) {
+        if( !args.ServiceResult.containsStatusCode( args.Service.Response.ResponseHeader.ServiceResult ) ) result = false;
+        if( !result && !args.SuppressErrors ) addError( args.Service.Name + ".Response.ResponseHeader.ServiceResult: " + args.Service.Response.ResponseHeader.ServiceResult + "; but " + args.ServiceResult.toString() );
+    }
+    else if( args.Service.Response.ResponseHeader.ServiceResult.isBad() ) {
+        if( !args.SuppressErrors ) addError( args.Service.Name + ".Response.ResponseHeader.ServiceResult is Bad: " + args.Service.Response.ResponseHeader.ServiceResult, args.Service.Response.ResponseHeader.ServiceResult );
+        result = false;
     }
 
     // TEST 2: RequestHandle matches

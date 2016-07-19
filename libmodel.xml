@@ -19,7 +19,7 @@
     <ItemData role="33" rolename="33">
      <Value typename="int" type="2" data="15"/>
     </ItemData>
-    <ChildRows size="20">
+    <ChildRows size="18">
      <Row row="0">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
@@ -31,7 +31,7 @@
        <ItemData role="33" rolename="33">
         <Value typename="int" type="2" data="15"/>
        </ItemData>
-       <ChildRows size="10">
+       <ChildRows size="9">
         <Row row="0">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
@@ -115,26 +115,6 @@
         <Row row="4">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
-           <Value typename="QString" type="10" data="hostnames.js"/>
-          </ItemData>
-          <ItemData role="32" rolename="UserRole">
-           <Value typename="int" type="2" data="1"/>
-          </ItemData>
-          <ItemData role="33" rolename="33">
-           <Value typename="int" type="2" data="7"/>
-          </ItemData>
-          <ChildRows size="0"/>
-         </Column>
-         <Column column="1">
-          <ItemData role="0" rolename="DisplayRole">
-           <Value typename="QString" type="10" data="Class object (helper) for simpifying the use of computer Hostnames."/>
-          </ItemData>
-          <ChildRows size="0"/>
-         </Column>
-        </Row>
-        <Row row="5">
-         <Column column="0">
-          <ItemData role="0" rolename="DisplayRole">
            <Value typename="QString" type="10" data="integerSet.js"/>
           </ItemData>
           <ItemData role="32" rolename="UserRole">
@@ -152,7 +132,7 @@
           <ChildRows size="0"/>
          </Column>
         </Row>
-        <Row row="6">
+        <Row row="5">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
            <Value typename="QString" type="10" data="keyPairCollection.js"/>
@@ -172,7 +152,7 @@
           <ChildRows size="0"/>
          </Column>
         </Row>
-        <Row row="7">
+        <Row row="6">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
            <Value typename="QString" type="10" data="monitoredItem.js"/>
@@ -192,7 +172,7 @@
           <ChildRows size="0"/>
          </Column>
         </Row>
-        <Row row="8">
+        <Row row="7">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
            <Value typename="QString" type="10" data="securityalgorithms.js"/>
@@ -212,7 +192,7 @@
           <ChildRows size="0"/>
          </Column>
         </Row>
-        <Row row="9">
+        <Row row="8">
          <Column column="0">
           <ItemData role="0" rolename="DisplayRole">
            <Value typename="QString" type="10" data="subscription.js"/>
@@ -385,26 +365,6 @@
      <Row row="4">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
-        <Value typename="QString" type="10" data="StringMatching.js"/>
-       </ItemData>
-       <ItemData role="32" rolename="UserRole">
-        <Value typename="int" type="2" data="1"/>
-       </ItemData>
-       <ItemData role="33" rolename="33">
-        <Value typename="int" type="2" data="7"/>
-       </ItemData>
-       <ChildRows size="0"/>
-      </Column>
-      <Column column="1">
-       <ItemData role="0" rolename="DisplayRole">
-        <Value typename="QString" type="10" data="Scripts to perform text/string pattern matching/extraction etc."/>
-       </ItemData>
-       <ChildRows size="0"/>
-      </Column>
-     </Row>
-     <Row row="5">
-      <Column column="0">
-       <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaVariantToSimpleType.js"/>
        </ItemData>
        <ItemData role="32" rolename="UserRole">
@@ -422,7 +382,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="6">
+     <Row row="5">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="array.js"/>
@@ -442,7 +402,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="7">
+     <Row row="6">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="assertions.js"/>
@@ -462,27 +422,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="8">
-      <Column column="0">
-       <ItemData role="0" rolename="DisplayRole">
-        <Value typename="QString" type="10" data="certificates.js"/>
-       </ItemData>
-       <ItemData role="32" rolename="UserRole">
-        <Value typename="int" type="2" data="1"/>
-       </ItemData>
-       <ItemData role="33" rolename="33">
-        <Value typename="int" type="2" data="7"/>
-       </ItemData>
-       <ChildRows size="0"/>
-      </Column>
-      <Column column="1">
-       <ItemData role="0" rolename="DisplayRole">
-        <Value typename="QString" type="10" data="Certificate validation."/>
-       </ItemData>
-       <ChildRows size="0"/>
-      </Column>
-     </Row>
-     <Row row="9">
+     <Row row="7">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="connect.js"/>
@@ -502,7 +442,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="10">
+     <Row row="8">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="connectChannel.js"/>
@@ -522,7 +462,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="11">
+     <Row row="9">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="disconnect.js"/>
@@ -542,7 +482,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="12">
+     <Row row="10">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="identity.js"/>
@@ -562,7 +502,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="13">
+     <Row row="11">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="indexRangeRelatedUtilities.js"/>
@@ -582,7 +522,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="14">
+     <Row row="12">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="locales.js"/>
@@ -602,7 +542,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="15">
+     <Row row="13">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="safeInvoke.js"/>
@@ -622,7 +562,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="16">
+     <Row row="14">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="serverCapabilities.js"/>
@@ -642,7 +582,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="17">
+     <Row row="15">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="serviceRegister.js"/>
@@ -662,7 +602,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="18">
+     <Row row="16">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="settings.js"/>
@@ -682,7 +622,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="19">
+     <Row row="17">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="warnOnce.js"/>
@@ -2843,7 +2783,7 @@
     <ItemData role="33" rolename="33">
      <Value typename="int" type="2" data="15"/>
     </ItemData>
-    <ChildRows size="22">
+    <ChildRows size="24">
      <Row row="0">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
@@ -3293,6 +3233,26 @@
      <Row row="12">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
+        <Value typename="QString" type="10" data="UaH.js"/>
+       </ItemData>
+       <ItemData role="32" rolename="UserRole">
+        <Value typename="int" type="2" data="1"/>
+       </ItemData>
+       <ItemData role="33" rolename="33">
+        <Value typename="int" type="2" data="7"/>
+       </ItemData>
+       <ChildRows size="0"/>
+      </Column>
+      <Column column="1">
+       <ItemData role="0" rolename="DisplayRole">
+        <Value typename="QString" type="10" data="Helpers for UA Objects starting with &quot;H&quot; or &quot;UaH&quot;"/>
+       </ItemData>
+       <ChildRows size="0"/>
+      </Column>
+     </Row>
+     <Row row="13">
+      <Column column="0">
+       <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaI.js"/>
        </ItemData>
        <ItemData role="32" rolename="UserRole">
@@ -3310,7 +3270,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="13">
+     <Row row="14">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaM.js"/>
@@ -3330,7 +3290,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="14">
+     <Row row="15">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaN.js"/>
@@ -3350,7 +3310,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="15">
+     <Row row="16">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaO.js"/>
@@ -3370,7 +3330,27 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="16">
+     <Row row="17">
+      <Column column="0">
+       <ItemData role="0" rolename="DisplayRole">
+        <Value typename="QString" type="10" data="UaP.js"/>
+       </ItemData>
+       <ItemData role="32" rolename="UserRole">
+        <Value typename="int" type="2" data="1"/>
+       </ItemData>
+       <ItemData role="33" rolename="33">
+        <Value typename="int" type="2" data="7"/>
+       </ItemData>
+       <ChildRows size="0"/>
+      </Column>
+      <Column column="1">
+       <ItemData role="0" rolename="DisplayRole">
+        <Value typename="QString" type="10" data="Helpers for UA Objects starting with &quot;P&quot; or &quot;UaP&quot;"/>
+       </ItemData>
+       <ChildRows size="0"/>
+      </Column>
+     </Row>
+     <Row row="18">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaQ.js"/>
@@ -3390,7 +3370,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="17">
+     <Row row="19">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaR.js"/>
@@ -3410,7 +3390,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="18">
+     <Row row="20">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaS.js"/>
@@ -3430,7 +3410,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="19">
+     <Row row="21">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaU.js"/>
@@ -3450,7 +3430,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="20">
+     <Row row="22">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaV.js"/>
@@ -3470,7 +3450,7 @@
        <ChildRows size="0"/>
       </Column>
      </Row>
-     <Row row="21">
+     <Row row="23">
       <Column column="0">
        <ItemData role="0" rolename="DisplayRole">
         <Value typename="QString" type="10" data="UaW.js"/>

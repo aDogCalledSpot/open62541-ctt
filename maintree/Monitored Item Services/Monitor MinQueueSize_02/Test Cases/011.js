@@ -11,7 +11,7 @@ const OVERFLOWBIT = 0x480;
     addLog( "Testing QueueSize: " + args.QueueSize );
 
     // make sure we have enough items first, and then get their initial values.
-    var items = MonitoredItem.fromSettings(  Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings );
+    var items = MonitoredItem.GetRequiredNodes( { Settings: Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings, Number: 2 } );
     if( items.length < 2 ) { addSkipped( "Not enough items available for testing. Please configure more." ); return( false ); }
     if( !ReadHelper.Execute( { NodesToRead: items } ) ) { addSkipped( "Unable to obtain initial values." );  return( false ); }
 
@@ -26,6 +26,7 @@ const OVERFLOWBIT = 0x480;
         for( var i=0; i<items.length; i++ ) {
             items[i].QueueSize = args.QueueSize;
             items[i].DiscardOldest = true;
+            items[i].ValuesWritten = [];
         }
         items[0].QueueSize = 1;
 
@@ -35,8 +36,11 @@ const OVERFLOWBIT = 0x480;
 
             // step 1: write to all items, 5 times, once per RevisedSamplingInterval
             for( var t=0; t<5; t++ ) {
-                for( var i=0; i<items.length; i++ ) UaVariant.Increment( { Value: items[i].Value } );
-                WriteHelper.Execute( { NodesToWrite: items } );
+                for( var i=0; i<items.length; i++ ) { 
+                    UaVariant.Increment( { Value: items[i].Value } );
+                    items[i].ValuesWritten.push( items[i].Value.Value.clone() );
+                }
+                WriteHelper.Execute( { NodesToWrite: items, ReadVerification: false } );
                 PublishHelper.WaitInterval( { Items: items[0], Subscription: sub } );
             }//for t...
 
@@ -82,9 +86,19 @@ const OVERFLOWBIT = 0x480;
 
     sub = null;
 
+    // print a summary of the test
+    print( "\n\nTEST SUMMARY: Shrink QueueSize when DiscardOldest=TRUE" );
+    for( var i=0; i<items.length; i++ ) {
+        var s = items[i].NodeSetting + ":\n\tWrote: ";
+        for( var v=0; v<items[i].ValuesWritten.length; v++ ) s += items[i].ValuesWritten[v] + " ";
+        s += "\n\tRevised QueueSize to: " + items[i].QueueSize;
+        s += "\n\tExpected: " + items[i].LastValue;
+        s += "\n\tReceived: " + items[i].Value.Value;
+        print( s );
+    }
     return( result );
 }
 
 function queueSize2() { return( QueueSize( { QueueSize: 2 } ) ); }
 
-Test.Execute( { Procedure: queueSize2 } );
+Test.Execute( { Debug: true, Procedure: queueSize2 } );

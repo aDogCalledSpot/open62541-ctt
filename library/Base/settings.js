@@ -41,6 +41,7 @@ Settings = {
         TimeSynchronizationChecking:        Settings.SafeRead( "/Server Test/Time Synchronization Checking" ),
         Capabilities: {
             MaxStringLength:                   parseInt( readSetting( "/Server Test/Capabilities/Max String Length" ) ),
+            MaxSupportedSessions:              parseInt( readSetting( "/Server Test/Capabilities/Max Supported Sessions" ) ),
             MaxSupportedSubscriptions:         parseInt( readSetting( "/Server Test/Capabilities/Max Supported Subscriptions" ) ),
             MaxSupportedMonitoredItems:        parseInt( readSetting( "/Server Test/Capabilities/Max Supported MonitoredItems" ) ),
             RetransmissionQueueSizePerSession: parseInt( readSetting( "/Server Test/Capabilities/Retransmission QueueSize per Session" ) ),
@@ -447,6 +448,7 @@ Settings = {
     }, // server test
     Advanced: {
         Certificates: {
+            Authority:                    Settings.SafeRead( "/Advanced/Certificates/CertificateAuthority" ),
             TrustListLocation:            Settings.SafeRead( "/Advanced/Certificates/CertificateTrustListLocation" ),
             RevocationListLocation:       Settings.SafeRead( "/Advanced/Certificates/CertificateRevocationListLocation" ),
             Certificate:                  Settings.SafeRead( "/Advanced/Certificates/ClientCertificate" ),
@@ -465,10 +467,22 @@ Settings = {
             IssuerUnknownPrivateKey:      Settings.SafeRead( "/Advanced/Certificates/ClientCertificate_IssuerUnknownPrivateKey" ),
             HostnameInvalid:              Settings.SafeRead( "/Advanced/Certificates/ClientCertificate_HostnameInvalid" ),
             HostnameInvalidPrivateKey:    Settings.SafeRead( "/Advanced/Certificates/ClientCertificate_HostnameInvalidPrivateKey" ),
-            User:                         Settings.SafeRead( "/Advanced/Certificates/UserCertificate" ),
-            Authority:                    Settings.SafeRead( "/Advanced/Certificates/CertificateAuthority" ),
             ExpiredNotTrusted:            Settings.SafeRead( "/Advanced/Certificates/ClientCertificate_ExpiredNotTrusted" ),
             ExpiredNotTrustedPrivateKey:  Settings.SafeRead( "/Advanced/Certificates/ClientCertificate_ExpiredNotTrustedPrivateKey" ),
+            User:                         Settings.SafeRead( "/Advanced/Certificates/UserCertificate" ),
+            UserPrivate:                  Settings.SafeRead( "/Advanced/Certificates/UserCertificate_PrivateKey" ),
+            UserCertNotTrusted:           Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Untrusted" ),
+            UserCertNotTrustedPrivateKey: Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Untrusted_PrivateKey" ),
+            UserCertNotYetValid:          Settings.SafeRead( "/Advanced/Certificates/UserCertificate_NotYetValid" ),
+            UserCertNotYetValidPrivateKey:Settings.SafeRead( "/Advanced/Certificates/UserCertificate_NotYetValid_PrivateKey" ),
+            UserCertExpired:              Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Expired" ),
+            UserCertExpiredPrivateKey:    Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Expired_PrivateKey" ),
+            UserCertIssued:               Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Issued" ),
+            UserCertIssuedPrivateKey:     Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Issued_PrivateKey" ),
+            UserCertRevoked:              Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Revoked" ),
+            UserCertRevokedPrivateKey:    Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Revoked_PrivateKey" ),
+            UserCertInvalid:              Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Invalid" ),
+            UserCertInvalidPrivateKey:    Settings.SafeRead( "/Advanced/Certificates/UserCertificate_Invalid_PrivateKey" ),
         }, // certificates
         NodeIds: {
             Invalid: {

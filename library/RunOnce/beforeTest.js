@@ -58,7 +58,7 @@ Assert.StringNotNullOrEmpty( Settings.Discovery.EndpointUrl );
 Assert.InRange( 1, 10001,  Settings.ServerTest.DefaultSubscriptionPublishInterval, "Server Test > Default Subscription Publish Interval" );
 Assert.InRange( 0, 30000,  Settings.ServerTest.TimeTolerance,                      "Server Test > Time Tolerance" );
 Assert.InRange( 1, 120,    Settings.ServerTest.SubscriptionTimeout,                "Server Test > Subscription Timeout" );
-Assert.InRange( 0, 3000,   Settings.ServerTest.Capabilities.MaxStringLength,            "Server Test > Capabilities > Max String Length" );
+Assert.InRange( 0, 65535,  Settings.ServerTest.Capabilities.MaxStringLength,            "Server Test > Capabilities > Max String Length" );
 Assert.InRange( 0, 65535,  Settings.ServerTest.Capabilities.MaxSupportedSubscriptions,  "Server Test > Capabilities > Max Supported Subscriptions" );
 Assert.InRange( 0, 65535,  Settings.ServerTest.Capabilities.MaxSupportedMonitoredItems, "Server Test > Capabilities > Max Supported Monitored Items" );
 Assert.InRange( 1, 65535,  Settings.ServerTest.Capabilities.RetransmissionQueueSizePerSession,  "Server Test > Capabilities > Retransmission QeueSize per Session" );

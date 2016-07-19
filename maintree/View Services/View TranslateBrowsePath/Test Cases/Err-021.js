@@ -7,7 +7,7 @@
 function translate573err021() {
     // HACK: define NodeId for OperatinLimits type until ANSI C stack revised 
     const Identifier_ServerCapabilities_OperationLimits_MaxTranslate = 11712;
-    var systemNode = MonitoredItem.fromNodeIds( new UaNodeId( Identifier.Server ) )[0];
+    var systemNode = MonitoredItem.fromNodeIds( new UaNodeId( Identifier.Server_ServerCapabilities ) )[0];
     // can we read the server capabilties?
     var expectedResults = [ new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadNodeIdUnknown ] ) ];
     var maxBrowseContinuationPoints = MonitoredItem.fromNodeIds( new UaNodeId( Identifier_ServerCapabilities_OperationLimits_MaxTranslate ) )[0];

@@ -1,0 +1,861 @@
+<UaCttResults xsi:noNamespaceSchemaLocation="uacttresults.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <ResultNode status="" description="" testresult="1" timestamp="2016-06-21 11:28:22.796" name="Debug Run1">
+  <ResultNode status="" description="" testresult="1" timestamp="2016-06-21 11:28:22.799" name="beforeTest.js">
+   <ResultNode status="" description="ServerCertificate is empty. This is allowed per Errata 1.02.03, but it can cause interoperability problems with older UA &#xa;1.01 Clients.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.862" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.862" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="checkGetEndpointsValidParameter" testresult="6" timestamp="2016-06-21 11:28:22.863" name="Backtrace" linenumber="141" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/DiscoveryServiceSet/GetEndpoints.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.863" name="Backtrace" linenumber="56" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/DiscoveryServiceSet/GetEndpoints.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.863" name="Backtrace" linenumber="81" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/DiscoveryServiceSet/GetEndpoints.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.864" name="Backtrace" linenumber="45" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/SecureChannel/OpenSecureChannel.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.864" name="Backtrace" linenumber="46" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.865" name="Backtrace" linenumber="88" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Session diagnostics not available; probably not supported.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.888" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.889" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.889" name="Backtrace" linenumber="128" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/SessionServiceSet/ActivateSession.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.889" name="Backtrace" linenumber="144" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/SessionServiceSet/ActivateSession.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.890" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/ServiceBased/SessionServiceSet/ActivateSession.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.890" name="Backtrace" linenumber="59" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.890" name="Backtrace" linenumber="88" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Duration'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/LocaleId'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Number'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Time'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/UInteger'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/UtcTime'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.996" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.996" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Variant'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Enumeration'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/Image'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/ImageBMP'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/ImageGIF'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Scalar/ImagePNG'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:22.997" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:22.997" name="Backtrace" linenumber="91" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/All Profiles/Arrays/Variant'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.017" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.017" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.017" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.017" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.017" name="Backtrace" linenumber="93" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Byte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.040" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.040" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.040" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.040" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.040" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Double'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.041" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Float'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.041" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Int16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.041" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Int32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.041" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/Int64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.041" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.041" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/UInt16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/UInt32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/UInt64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/SByte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/String'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DataItem/DateTime'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.043" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.043" name="Backtrace" linenumber="95" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/MultiStateDiscrete001'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.046" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.046" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.046" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.046" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.046" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/MultiStateDiscrete002'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/MultiStateDiscrete003'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/MultiStateDiscrete004'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/MultiStateDiscrete005'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/TwoStateDiscrete001'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/TwoStateDiscrete002'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/TwoStateDiscrete003'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/TwoStateDiscrete004'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/DiscreteType/TwoStateDiscrete005'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.047" name="Backtrace" linenumber="99" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/Byte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.047" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/SByte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/Int16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/Int32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/Int64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/UInt16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/UInt32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/MultiStateValueDiscreteType/UInt64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="101" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/ArrayItemType/YArrayItemType'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="103" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/ArrayItemType/XYArrayItemType'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.048" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.048" name="Backtrace" linenumber="103" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/ArrayItemType/ImageItemType'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="103" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/ArrayItemType/CubeItemType'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="103" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/ArrayItemType/NDimensionArrayItemType'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="103" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Bool'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Byte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/ByteString'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/DateTime'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Double'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Float'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Int16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.049" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Int32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.049" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/Int64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/UInt16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/UInt32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/UInt64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/SByte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Scalar/XmlElement'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="105" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Bool'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Byte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/ByteString'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/DateTime'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.050" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Double'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.050" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Float'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/SByte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/String'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/XmlElement'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Bool2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.051" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.051" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Byte2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/ByteString2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/DateTime2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Double2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Float2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int162D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int322D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/Int642D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/SByte2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/String2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.052" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt162D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.052" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt322D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/UInt642D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/Arrays/XmlElement2D'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="107" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/AccessLevel_ReadOnly'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/AccessLevel_WriteOnly'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/AccessLevel_None'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/UserAccessLevel_ReadOnly'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/UserAccessLevel_WriteOnly'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/HA Profile/AccessRights/UserAccessLevel_None'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.053" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.053" name="Backtrace" linenumber="109" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/NodeClasses/View'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.060" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.060" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.060" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.060" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.060" name="Backtrace" linenumber="114" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentRead'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentWrite'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentRead_NotUser'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentWrite_NotUser'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentRead_NotCurrentWrite'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/SecurityAccess/AccessLevel_CurrentWrite_NotCurrentRead'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="117" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Methods/MethodNoArgs'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="131" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Methods/MethodIO'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="131" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Methods/MethodO'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="131" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+   <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Methods/MultipleMethods'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:28:23.066" name="Warning">
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+    <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:28:23.066" name="Backtrace" linenumber="131" filename="C:/Home/Projekte/open62541-ctt/library/RunOnce/beforeTest.js"/>
+   </ResultNode>
+  </ResultNode>
+  <ResultNode status="" description="Clients define MonitoredItems to subscribe to data and Events. Each MonitoredItem identifies the item to be monitored and &#xa;the Subscription to use to send Notifications." testresult="1" timestamp="2016-06-21 11:28:23.072" name="Monitored Item Services">
+   <ResultNode status="" description="Support the following MonitoredItem Services: CreateMonitoredItems, ModifyMonitoredItems, DeleteMonitoredItems, SetMonitoringMode." testresult="1" timestamp="2016-06-21 11:28:23.072" name="Monitor Basic">
+    <ResultNode status="" description="" testresult="5" timestamp="2016-06-21 11:28:23.072" name="initialize.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Create a monitored item with the nodeId set to that of a non-Variable node and the attributeId set &#xa;to a non-Value attribute. Call Publish." testresult="5" timestamp="2016-06-21 11:28:23.127" name="001.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify a single monitored item." testresult="5" timestamp="2016-06-21 11:28:24.129" name="002.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Single item; ReturnTimestamp=Source." testresult="5" timestamp="2016-06-21 11:28:24.879" name="003.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Single item; ReturnTimestamp=Server." testresult="5" timestamp="2016-06-21 11:28:26.128" name="004.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Single item; ReturnTimestamp=Both." testresult="5" timestamp="2016-06-21 11:28:27.383" name="005.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Single item; ReturnTimestamp=Neither." testresult="5" timestamp="2016-06-21 11:28:28.627" name="006.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify single monitoredItem, change queue length to 0." testresult="5" timestamp="2016-06-21 11:28:29.885" name="007.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify the samplingInterval to 10 msec for one item." testresult="5" timestamp="2016-06-21 11:28:30.628" name="009.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Change the SamplingInterval for all items, vary the scanrate." testresult="5" timestamp="2016-06-21 11:28:31.378" name="010.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify the QueueSize of the first item to zero." testresult="5" timestamp="2016-06-21 11:28:32.377" name="011.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify the QueueSize of the first item to maxInt." testresult="5" timestamp="2016-06-21 11:28:33.128" name="012.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: large loop of create/delete." testresult="5" timestamp="2016-06-21 11:28:33.879" name="014.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Script deletes all monitored items from a subscription." testresult="5" timestamp="2016-06-21 11:28:51.127" name="015.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Specifies a valid subscriptionId and multiple monitoredItemIds." testresult="5" timestamp="2016-06-21 11:28:51.880" name="016.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Specify valid item." testresult="5" timestamp="2016-06-21 11:28:52.627" name="017.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Modify the monitoring mode of 10 items (initial monitoring mode: reporting) with multiple items being &#xa;set to each of the three modes (Disabled, Reporting, Sampling). Call publish before and after changing the mode and verify &#xa;that datachange notifications are received only for the reporting items." testresult="5" timestamp="2016-06-21 11:28:53.377" name="018.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Change the ClientHandle for the first item to a very large number. " testresult="5" timestamp="2016-06-21 11:28:54.627" name="019.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to disabled for an already disabled monitor item. Call publish each time to verify &#xa;that no notifications are received." testresult="5" timestamp="2016-06-21 11:28:55.377" name="020.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to sampling for a disabled monitor item. Call publish each time to verify that no &#xa;notifications are received." testresult="5" timestamp="2016-06-21 11:28:57.631" name="021.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to reporting for a disabled monitor item. Call publish once when the monitoring mode &#xa;is disabled and once when it has been changed to reporting. Verify that data is only received the second time." testresult="5" timestamp="2016-06-21 11:28:59.879" name="022.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to disabled for a sampling monitor item. Call publish each time to verify that no &#xa;notifications are received." testresult="5" timestamp="2016-06-21 11:29:01.628" name="023.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to sampling for an already sampling monitor item. Call publish each time to verify &#xa;that no notifications are received." testresult="5" timestamp="2016-06-21 11:29:03.880" name="024.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to reporting for a sampling monitor item. Call publish once when the monitoring mode &#xa;is sampling and once when it has been changed to reporting. Verify that data is only received the second time." testresult="5" timestamp="2016-06-21 11:29:06.129" name="025.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to disabled for a reporting monitor item. Call publish once when the monitoring mode &#xa;is reporting and once when it has been changed to disabled. Verify that data is only received the first time." testresult="5" timestamp="2016-06-21 11:29:07.881" name="026.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to sampling for a reporting monitor item. Call publish once when the monitoring mode &#xa;is reporting and once when it has been changed to sampling. Verify that data is only received the first time." testresult="5" timestamp="2016-06-21 11:29:09.628" name="027.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode to reporting for an already reporting monitor item. Call publish each time to verify &#xa;notifications are received." testresult="5" timestamp="2016-06-21 11:29:11.381" name="028.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: 1 item, invalid subscritionId." testresult="5" timestamp="2016-06-21 11:29:12.630" name="Err-001.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: multiple items, invalid subscritionId." testresult="5" timestamp="2016-06-21 11:29:13.378" name="Err-002.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Multiple Invalid NodeIds." testresult="5" timestamp="2016-06-21 11:29:14.128" name="Err-003.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Invalid NodeId" testresult="5" timestamp="2016-06-21 11:29:14.880" name="Err-004.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Unknown NodeId." testresult="5" timestamp="2016-06-21 11:29:15.628" name="Err-005.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Invalid AttributeId." testresult="5" timestamp="2016-06-21 11:29:16.378" name="Err-006.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Create a Monitored Item using an Array node while specifying an invalid IndexRange specified using &#xa;an incorrect syntax of “5:2” (which is backwards)." testresult="5" timestamp="2016-06-21 11:29:17.127" name="Err-007.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Script specifies an invalid IndexRange of “2-4” (hyphen is an incorrect character) for an array item." testresult="5" timestamp="2016-06-21 11:29:17.882" name="Err-008.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Script specifies an invalid IndexRange of “2:2” (not a range) for an array item." testresult="5" timestamp="2016-06-21 11:29:18.627" name="Err-009.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Specify an invalid samplingInterval (-10 ms)" testresult="5" timestamp="2016-06-21 11:29:19.380" name="Err-010.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Specify an invalid IndexRange of “-4:-2” (negative) for an array item." testresult="5" timestamp="2016-06-21 11:29:20.130" name="Err-011.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Create a monitored item using an ByteStringArray and StringArray node while specifying invalid IndexRange &#xa;as: “[0:0],[2:1]”." testresult="5" timestamp="2016-06-21 11:29:20.880" name="Err-012.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Create a monitored item using an ByteStringArray and StringArray node while specifying invalid IndexRange &#xa;as: “0-0,2-1”." testresult="5" timestamp="2016-06-21 11:29:21.627" name="Err-013.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Specify an invalid (out of bounds) IndexRange for a ByteStringArray and a StringArray node." testresult="5" timestamp="2016-06-21 11:29:22.378" name="Err-014.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: TimestampsToReturn = a value not in the enum." testresult="5" timestamp="2016-06-21 11:29:23.129" name="Err-015.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: ItemsToCreate[] is empty." testresult="5" timestamp="2016-06-21 11:29:23.881" name="Err-016.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Specify an invalid subscriptionId." testresult="5" timestamp="2016-06-21 11:29:24.628" name="Err-017.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Specify an invalid monitoredItemId." testresult="5" timestamp="2016-06-21 11:29:25.379" name="Err-018.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: All invalid monitoredItemIds." testresult="5" timestamp="2016-06-21 11:29:26.128" name="Err-019.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Change the ClientHandle for the first item to a number already in use by another MonitoredItem. " testresult="5" timestamp="2016-06-21 11:29:26.877" name="Err-020.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Specify some valid and some invalid monitoredItemIds." testresult="5" timestamp="2016-06-21 11:29:27.628" name="Err-021.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Request unsupported filter, e.g. PercentDeadband." testresult="1" timestamp="2016-06-21 11:29:28.380" name="Err-022.js">
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Byte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.392" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.393" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.393" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.393" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.394" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.395" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Double'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.396" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Float'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.396" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Int16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.396" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.396" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Int32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.421" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/Int64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.421" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.421" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/UInt16'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.421" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/UInt32'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.422" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/UInt64'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.422" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/SByte'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.422" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/NodeIdWithEngineeringUnits'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.422" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+     <ResultNode status="" description="Setting not configured: '/Server Test/NodeIds/Static/DA Profile/AnalogType/NodeIdWithInstrumentRange'.&#xa;Message suppressed from being displayed again." testresult="1" timestamp="2016-06-21 11:29:28.422" name="Warning">
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="79" filename="C:/Home/Projekte/open62541-ctt/library/Base/warnOnce.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="274" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="284" filename="C:/Home/Projekte/open62541-ctt/library/Base/Objects/monitoredItem.js"/>
+      <ResultNode status="" functionname="modifyMonitoredItems592011" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="10" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="98" filename="C:/Home/Projekte/open62541-ctt/library/Base/safeInvoke.js"/>
+      <ResultNode status="" functionname="" testresult="6" timestamp="2016-06-21 11:29:28.422" name="Backtrace" linenumber="38" filename="C:/Home/Projekte/open62541-ctt/maintree/Monitored Item Services/Monitor Basic/Test Cases/Err-022.js"/>
+     </ResultNode>
+    </ResultNode>
+    <ResultNode status="" description="ModifyMonitoredItems: Modify the items in one subscription but specify the monitoredItemId of an item from another subscription." testresult="5" timestamp="2016-06-21 11:29:29.378" name="Err-023.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: ItemsToModify is empty." testresult="5" timestamp="2016-06-21 11:29:30.128" name="Err-024.js"/>
+    <ResultNode status="" description="ModifyMonitoredItems: Specify a value for 'TimestampsToReturn' that is not in the enum." testresult="5" timestamp="2016-06-21 11:29:30.882" name="Err-025.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Specify invalid monitoredItemId." testresult="5" timestamp="2016-06-21 11:29:31.628" name="Err-026.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Specify multiple invalid monitoredItemIds." testresult="5" timestamp="2016-06-21 11:29:32.381" name="Err-027.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Specify multiple monitoredItemIds, some valid and some invalid Ids." testresult="5" timestamp="2016-06-21 11:29:33.128" name="Err-028.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Specify invalid subscriptionId." testresult="5" timestamp="2016-06-21 11:29:33.883" name="Err-029.js"/>
+    <ResultNode status="" description="SetMonitoringMode: MonitoredItemIds is empty." testresult="5" timestamp="2016-06-21 11:29:34.628" name="Err-030.js"/>
+    <ResultNode status="" description="SetMonitoringMode: Set monitoring mode of at least one monitoreditemId belonging to a different subscription." testresult="5" timestamp="2016-06-21 11:29:35.378" name="Err-031.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Specify invalid subscriptionId." testresult="3" timestamp="2016-06-21 11:29:36.127" name="Err-032.js">
+     <ResultNode status="" description="Scalar nodes not defined. Check settings: /Server Test/NodeIds/Static/All Profiles/Scalar." testresult="3" timestamp="2016-06-21 11:29:36.134" name="Skipped"/>
+    </ResultNode>
+    <ResultNode status="" description="DeleteMonitoredItems: Specify Invalid monitoredItemId." testresult="3" timestamp="2016-06-21 11:29:36.878" name="Err-033.js">
+     <ResultNode status="" description="Scalar nodes not defined. Check settings: /Server Test/NodeIds/Static/All Profiles/Scalar." testresult="3" timestamp="2016-06-21 11:29:36.884" name="Skipped"/>
+    </ResultNode>
+    <ResultNode status="" description="DeleteMonitoredItems: Specify a valid subscriptionId and multiple invalid monitoredItemIds." testresult="5" timestamp="2016-06-21 11:29:37.627" name="Err-034.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Specify a valid subscriptionId, and multiple monitoredItemIds of which some are valid and some are &#xa;invalid." testresult="3" timestamp="2016-06-21 11:29:38.378" name="Err-035.js">
+     <ResultNode status="" description="Scalar nodes not defined. Check settings: /Server Test/NodeIds/Static/All Profiles/Scalar." testresult="3" timestamp="2016-06-21 11:29:38.386" name="Skipped"/>
+    </ResultNode>
+    <ResultNode status="" description="DeleteMonitoredItems: Script specifies empty monitoredItemIds[]." testresult="5" timestamp="2016-06-21 11:29:39.128" name="Err-037.js"/>
+    <ResultNode status="" description="DeleteMonitoredItems: Delete items from one Subscription, and make sure they other Subscription is not affected." testresult="5" timestamp="2016-06-21 11:29:39.883" name="Err-038.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Script specifies an invalid IndexRange of “-2:0” (negative) for an array item." testresult="5" timestamp="2016-06-21 11:29:40.129" name="Err-039.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Script specifies an invalid IndexRange of “0x2:0xF” (hex) for an array item." testresult="5" timestamp="2016-06-21 11:29:40.879" name="Err-040.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Specify 2d IndexRange &quot;2:3,1:2&quot; on a single dimension Array. Script checks ValueRank and ArrayDimensions." testresult="5" timestamp="2016-06-21 11:29:41.637" name="Err-041.js"/>
+    <ResultNode status="" description="CreateMonitoredItems: Request deadband when server doesnt support them." testresult="5" timestamp="2016-06-21 11:29:42.380" name="Err-042.js"/>
+    <ResultNode status="" description="" testresult="5" timestamp="2016-06-21 11:29:43.127" name="cleanup.js"/>
+   </ResultNode>
+  </ResultNode>
+  <ResultNode status="" description="" testresult="4" timestamp="2016-06-21 11:29:43.136" name="afterTest.js">
+   <ResultNode status="" description="Cancel not implemented." testresult="4" timestamp="2016-06-21 11:29:43.162" name="Not Supported"/>
+   <ResultNode status="" description="QueryFirst not implemented." testresult="4" timestamp="2016-06-21 11:29:43.186" name="Not Supported"/>
+   <ResultNode status="" description="QueryNext not implemented." testresult="4" timestamp="2016-06-21 11:29:43.187" name="Not Supported"/>
+   <ResultNode status="" description="HistoryUpdate not implemented." testresult="4" timestamp="2016-06-21 11:29:43.203" name="Not Supported"/>
+   <ResultNode status="" description="SetTriggering not implemented." testresult="4" timestamp="2016-06-21 11:29:43.221" name="Not Supported"/>
+   <ResultNode status="" description="TransferSubscriptions not implemented." testresult="4" timestamp="2016-06-21 11:29:43.380" name="Not Supported"/>
+  </ResultNode>
+ </ResultNode>
+</UaCttResults>

@@ -24,6 +24,7 @@ function Test572Err6( returnDiagnostics ) {
     // test is not needed if the server re-uses the ContinuationPoint handle
     if( firstResponses[0].Results[0].ContinuationPoint.equals( firstResponses[1].Results[0].ContinuationPoint ) ) {
         addLog( "Server re-used the ContinuationPoint handle in the BrowseNext response." );
+        releaseContinuationPoints( Test.Session.Session, firstResponses[1] );
         return( false );
     }
     // BrowseNext with old ContinuationPoint

@@ -166,7 +166,7 @@ if( isDefined( args.ProvideNonce ) || isDefined( args.CustomNonce ) ) throw( "Cr
             }
         }
         else {
-            if( Assert.True( ServerCertificateIsValid( this.Response.ServerCertificate, this.Request.EndpointUrl ), "Expected CreateSession.Response.ServerCertificate to contain valid credentials/information.", "CreateSession.Response.ServerCertificate validated successfully." ) ) {
+            if( Assert.True( UaPkiCertificate.IsValid( this.Response.ServerCertificate, this.Request.EndpointUrl ), "Expected CreateSession.Response.ServerCertificate to contain valid credentials/information.", "CreateSession.Response.ServerCertificate validated successfully." ) ) {
                 // check if the server certificate is the same as the one used for creating the channel
                 if( !this.Channel.Channel.ServerCertificate.equals( this.Response.ServerCertificate ) ) {
                     addError( "ServerCertificate returned in CreateSessionResponse (length: " + this.Response.ServerCertificate.length + ") is different than the one used in CreateChannel (length: " + this.Channel.Channel.ServerCertificate + ")." );

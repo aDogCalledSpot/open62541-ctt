@@ -1,16 +1,21 @@
 /*  Test prepared by nathan.pocock@opcfoundation.org
-    Try to change the InstrumentRange, EURange, EngineeringUnits, or Title, of all AnalogItems. */
+    Try to change the InstrumentRange, EURange, EngineeringUnits, or Title, of all analogArrayItems. */
 
 function semanticChanges013() {
+    if( !isDefined( analogArrayItems ) ) {
+        addSkipped( "No Analog Array items defined in settings. Skipping test." );
+        return( false );
+    }
+
     var result = true;
     // get our items from settings and then find some properties to write to...
     var browsePathsForAllItems = [];
     var propertyNames = [ "InstrumentRange", "EURange", "EngineeringUnits", "Title" ];
     var expectedResults = [];
-    for( var i=0; i<analogItems.length; i++ ) {                                                                // iterate thru all items
+    for( var i=0; i<analogArrayItems.length; i++ ) {                                                           // iterate thru all items
         for( var p=0; p<propertyNames.length; p++ ) {                                                          // iterate thru all property names
             browsePathsForAllItems.push( UaBrowsePath.New( { 
-                    StartingNode: analogItems[i],
+                    StartingNode: analogArrayItems[i],
                     RelativePathStrings: [ propertyNames[p] ] } ) );
             expectedResults.push( new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadNoMatch ] ) );
         }
@@ -19,6 +24,7 @@ function semanticChanges013() {
     if( TranslateBrowsePathsToNodeIdsHelper.Execute( { UaBrowsePaths: browsePathsForAllItems, OperationResults: expectedResults } ) ) {
         // iterate thru the results to find the nodes that we can work with
         var propertyNodes = [];
+        var analogNodes = [];
         for( var i=0; i<TranslateBrowsePathsToNodeIdsHelper.Response.Results.length; i++ ) {               // iterate thru all translate results...
         var thisResult = TranslateBrowsePathsToNodeIdsHelper.Response.Results[i];                          // get *this* result to a variable for easier access
             if( thisResult.StatusCode.isGood() ) {                                                         // we only care about GOOD results
@@ -28,6 +34,7 @@ function semanticChanges013() {
                             propertyNodes.push( MonitoredItem.fromNodeIds( [ thisResult.Targets[t].TargetId.NodeId ] )[0] );    // use this target to test with
                         }//in this server?
                     }//for t...
+                    analogNodes.push( MonitoredItem.fromNodeIds( [ TranslateBrowsePathsToNodeIdsHelper.Request.BrowsePaths[i].StartingNode] )[0] );// save the analog node for monitoring
                 }//targets > 0?
             }//is good?
         }//for i...
@@ -38,51 +45,51 @@ function semanticChanges013() {
                 propertyNodes[i].OriginalValue = propertyNodes[i].Value.Value.clone(); // clone the value so we can revert back to it later
             }//for i..
 
-            // STEP 3: Change the value for all of our properties
-            expectedResults = [];
-            for( var i=0; i<propertyNodes.length; i++ ) {                           // iterate thru all nodes
-                var extObj = propertyNodes[i].Value.Value.toExtensionObject();      // convert the value to an extension object
-                if( extObj !== null ) {
-                    if( extObj.TypeId.NodeId.equals(new UaNodeId( Identifier.Range ) ) || extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.Range_Encoding_DefaultBinary ) ) ) { // RANGE
-                        var rangeObj = extObj.toRange();                            // convert extensionObject to range object
-                        rangeObj.High += -1;                                        // set a new high value
-                        rangeObj.Low += 1;                                          // set a new low value 
-                        extObj.setRange( rangeObj );                                // re-package the extension object with the new range definition
-                        propertyNodes[i].Value.Value.setExtensionObject( extObj );  // set the item's value to the new extension object
-                    }
-                    else if( extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.EUInformation ) ) || extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.EUInformation_Encoding_DefaultBinary ) ) ) { // EUINFO
-                        var euinfoObj = extObj.toEUInformation();                    // cast to euinformation object from extension object
-                        euinfoObj.DisplayName.Text = "#CTT#";                        // specify a new display name
-                        extObj.setEUInformation( euinfoObj );                        // re-package the extension object with the updated euinformation
-                        propertyNodes[i].Value.Value.setExtensionObject( extObj );   // set the item's value to the new extension object
-                    }
-                    expectedResults.push( new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadUserAccessDenied, StatusCode.BadNotWritable, StatusCode.BadNotImplemented, StatusCode.BadNotSupported ] ) );
-                }// extObject is not null
-            }//for i..
+            // STEP 3: add these monitored items to our default subscription; we'll check the notification for semantic changes
+            if( CreateMonitoredItemsHelper.Execute( { ItemsToCreate: analogNodes, SubscriptionId: defaultSubscription } ) ) {    
 
-            // STEP 4: Write the new property values 
-            if( WriteHelper.Execute( { NodesToWrite: propertyNodes, 
-                                       OperationResults: expectedResults,
-                                       ReadVerification: false } ) ) {                                              // write all new properties to the server
+                // STEP 4: Change the value for all of our properties
+                expectedResults = [];
+                for( var i=0; i<propertyNodes.length; i++ ) {                           // iterate thru all nodes
+                    var extObj = propertyNodes[i].Value.Value.toExtensionObject();      // convert the value to an extension object
+                    if( extObj !== null ) {
+                        if( extObj.TypeId.NodeId.equals(new UaNodeId( Identifier.Range ) ) || extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.Range_Encoding_DefaultBinary ) ) ) { // RANGE
+                            var rangeObj = extObj.toRange();                            // convert extensionObject to range object
+                            rangeObj.High += -1;                                        // set a new high value
+                            rangeObj.Low += 1;                                          // set a new low value 
+                            extObj.setRange( rangeObj );                                // re-package the extension object with the new range definition
+                            propertyNodes[i].Value.Value.setExtensionObject( extObj );  // set the item's value to the new extension object
+                        }
+                        else if( extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.EUInformation ) ) || extObj.TypeId.NodeId.equals( new UaNodeId( Identifier.EUInformation_Encoding_DefaultBinary ) ) ) { // EUINFO
+                            var euinfoObj = extObj.toEUInformation();                    // cast to euinformation object from extension object
+                            euinfoObj.DisplayName.Text = "#CTT#";                        // specify a new display name
+                            extObj.setEUInformation( euinfoObj );                        // re-package the extension object with the updated euinformation
+                            propertyNodes[i].Value.Value.setExtensionObject( extObj );   // set the item's value to the new extension object
+                        }
+                        expectedResults.push( new ExpectedAndAcceptedResults( [ StatusCode.Good, StatusCode.BadUserAccessDenied, StatusCode.BadNotWritable, StatusCode.BadNotImplemented, StatusCode.BadNotSupported ] ) );
+                    }// extObject is not null
+                }//for i..
 
-                // check the Write results and remove any 'propertyNodes' that failed the write
-                // convert all failures into a NULL
-                for( var i=0; i<WriteHelper.Response.Results.length; i++ ) if( WriteHelper.Response.Results[i].isBad() ) propertyNodes[i] = null;
-                // now trim all nulls from the array
-                var i=0;
-                while( i < propertyNodes.length ) {
-                    if( propertyNodes[i] == null ) propertyNodes.splice( i, 1 );
-                    else i++;
-                }// while i...
+                // STEP 5: Write the new property values 
+                if( WriteHelper.Execute( { NodesToWrite: propertyNodes, 
+                                           OperationResults: expectedResults,
+                                           ReadVerification: false } ) ) {     // write all new properties to the server
 
-                if( propertyNodes.length == 0 ) addSkipped( "Attempts to write a new EURange failed, which is legal. Skipping test." ); 
-                else {
-
-                    // STEP 5: add these monitored items to our default subscription; we'll check the notification for semantic changes
-                    if( CreateMonitoredItemsHelper.Execute( { ItemsToCreate: propertyNodes, SubscriptionId: defaultSubscription } ) ) {
+                    // check the Write results and remove any 'propertyNodes' that failed the write
+                    // convert all failures into a NULL
+                    for( var i=0; i<WriteHelper.Response.Results.length; i++ ) if( WriteHelper.Response.Results[i].isBad() ) propertyNodes[i] = null;
+                    // now trim all nulls from the array
+                    var i=0;
+                    while( i < propertyNodes.length ) {
+                        if( propertyNodes[i] == null ) propertyNodes.splice( i, 1 );
+                        else i++;
+                    }// while i...
+    
+                    if( propertyNodes.length == 0 ) addSkipped( "Attempts to write a new EURange failed, which is legal. Skipping test." ); 
+                    else {
 
                         // STEP 6: Call Publish, see if we get the semantic-change
-                        PublishHelper.WaitInterval( { Items: propertyNodes, Subscription: defaultSubscription } );          // wait, before calling Publish
+                        PublishHelper.WaitInterval( { Items: analogNodes, Subscription: defaultSubscription } );          // wait, before calling Publish
                         if( PublishHelper.Execute() ) {                                                                     // call Publish; check results if OK...
                             if( !PublishHelper.CurrentlyContainsData() ) PublishHelper.Execute();                           // if Publish is empty; call once more
                             if( Assert.True( PublishHelper.CurrentlyContainsData(), "Expected an initial data change" ) ) { // contains data?
@@ -101,14 +108,14 @@ function semanticChanges013() {
 
                         // CLEAN UP: Revert all property values; don't care if they succeed or fail
                         for( var i=0; i<propertyNodes.length; i++ ) propertyNodes[i].Value.Value = propertyNodes[i].OriginalValue;
-                        WriteHelper.Execute( { NodesToWrite: propertyNodes, OperationResults: expectedResults } );
+                        WriteHelper.Execute( { NodesToWrite: propertyNodes, ReadVerification: false, OperationResults: expectedResults } );
 
                         // clean-up
-                        DeleteMonitoredItemsHelper.Execute( { ItemsToDelete: propertyNodes, SubscriptionId: defaultSubscription } );  // remove the monitored items
+                        DeleteMonitoredItemsHelper.Execute( { ItemsToDelete: analogNodes, SubscriptionId: defaultSubscription } );  // remove the monitored items
 
-                    }//write success?
-                    else result = false;
-                }
+                    }//propertyNodes remain?
+                }//write success?
+                else result = false;
 
             }// create monitored items
             else result = false;

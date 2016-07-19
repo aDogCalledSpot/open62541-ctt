@@ -1,7 +1,9 @@
 /*  Test prepared by Nathan Pocock; nathan.pocock@opcfoundation.org
     Description: Create multiple monitored items where item[0].QueueSize=1; [1].QueueSize=2; both.DiscardOldest=false. 
     Write 5 values to each node, pausing RevisedSamplingInterval each time. 
-    Modify both items so item [0].QueueSize=2; [1].QueueSize=1. Call Publish. */
+    Modify both items so item [0].QueueSize=2; [1].QueueSize=1. Call Publish.
+
+    Assumption: the item whose queue changes from 2 to 1 will effectively ignore the DiscardOldest setting */
 
 function QueueSize( args ) {
 const OVERFLOWBIT = 0x480;
@@ -11,7 +13,7 @@ const OVERFLOWBIT = 0x480;
     addLog( "Testing QueueSize: " + args.QueueSize );
 
     // make sure we have enough items first, and then get their initial values.
-    var items = MonitoredItem.fromSettings(  Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings );
+    var items = MonitoredItem.GetRequiredNodes( { Settings: Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings, Number: 2 } );
     if( items.length < 2 ) { addSkipped( "Not enough items available for testing. Please configure more." ); return( false ); }
     if( !ReadHelper.Execute( { NodesToRead: items } ) ) { addSkipped( "Unable to obtain initial values." );  return( false ); }
 
@@ -22,10 +24,11 @@ const OVERFLOWBIT = 0x480;
     var sub = new Subscription();
     if( CreateSubscriptionHelper.Execute( { Subscription: sub } ) ) {
 
-        // configure our test items per the test-case
+        // configure our test items per the test-case (item[0].QueueSize=2; item[1].QueueSize=1)
         for( var i=0; i<items.length; i++ ) {
             items[i].QueueSize = args.QueueSize;
             items[i].DiscardOldest = false;
+            items[i].ValuesWritten = [];
         }
         items[0].QueueSize = 1;
 
@@ -37,11 +40,11 @@ const OVERFLOWBIT = 0x480;
             for( var t=0; t<5; t++ ) {
                 for( var i=0; i<items.length; i++ ) {
                     UaVariant.Increment( { Value: items[i].Value } );
-                    // remember the first value written for the first item; all other items remember the last!
-                    if( t === 0 && i === 0 ) items[i].FirstValue = items[i].Value.Value.clone();
-                    else items[i].LastValue = items[i].Value.Value.clone();
+                    items[i].ValuesWritten.push( items[i].Value.Value.clone() );
+                    // remember the first value written for all items!
+                    items[i].FirstValue = items[i].Value.Value.clone();
                 }
-                WriteHelper.Execute( { NodesToWrite: items } );
+                WriteHelper.Execute( { NodesToWrite: items, ReadVerification: false } );
                 PublishHelper.WaitInterval( { Items: items[0], Subscription: sub } );
             }//for t...
 
@@ -84,6 +87,17 @@ const OVERFLOWBIT = 0x480;
     }// create subscription
 
     sub = null;
+
+    // print a summary of the test
+    print( "\n\nTEST SUMMARY: Shrink QueueSize when DiscardOldest=FALSE" );
+    for( var i=0; i<items.length; i++ ) {
+        var s = items[i].NodeSetting + ":\n\tWrote: ";
+        for( var v=0; v<items[i].ValuesWritten.length; v++ ) s += items[i].ValuesWritten[v] + " ";
+        s += "\n\tRevised QueueSize to: " + items[i].QueueSize;
+        s += "\n\tExpected: " + items[i].FirstValue;
+        s += "\n\tReceived: " + items[i].Value.Value;
+        print( s );
+    }
 
     return( result );
 }

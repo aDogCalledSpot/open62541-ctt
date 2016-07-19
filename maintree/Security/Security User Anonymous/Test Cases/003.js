@@ -5,9 +5,9 @@
 
 // This function uses the GETENDPOINTS data obtained in the initialize script
 function findNoAnonymousInEndpoints( epIndex ) {
-    var s = GETENDPOINTS.Response.Endpoints[epIndex];
-    for( var u=0; u<GETENDPOINTS.Response.Endpoints[epIndex].UserIdentityTokens.length; u++ ) {
-        if( GETENDPOINTS.Response.Endpoints[epIndex].UserIdentityTokens[u].TokenType === UserTokenType.Anonymous ) {
+    var s = gServerCapabilities.Endpoints[epIndex];
+    for( var u=0; u<gServerCapabilities.Endpoints[epIndex].UserIdentityTokens.length; u++ ) {
+        if( gServerCapabilities.Endpoints[epIndex].UserIdentityTokens[u].TokenType === UserTokenType.Anonymous ) {
             s = null;
             break;
         }

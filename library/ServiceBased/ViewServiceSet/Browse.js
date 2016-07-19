@@ -54,11 +54,11 @@ function BrowseService( args ) {
             var uaBD = new UaBrowseDescription();
             if( isDefined( args.NodesToBrowse[n].NodeId ) ) uaBD.NodeId = args.NodesToBrowse[n].NodeId;
             else uaBD.NodeId = args.NodesToBrowse[n];
-            if( args.NodesToBrowse[n].BrowseDirection !== undefined && args.NodesToBrowse[n].BrowseDirection !== null ){ uaBD.BrowseDirection = args.NodesToBrowse[n].BrowseDirection; }
-            if( args.NodesToBrowse[n].IncludeSubtypes !== undefined && args.NodesToBrowse[n].IncludeSubtypes !== null ){ uaBD.IncludeSubtypes = args.NodesToBrowse[n].IncludeSubtypes; }
-            if( args.NodesToBrowse[n].NodeClass       !== undefined && args.NodesToBrowse[n].NodeClass       !== null ){ uaBD.NodeClassMask   = args.NodesToBrowse[n].NodeClass; }
-            if( args.NodesToBrowse[n].ReferenceTypeId !== undefined && args.NodesToBrowse[n].ReferenceTypeId !== null ){ uaBD.ReferenceTypeId = args.NodesToBrowse[n].ReferenceTypeId; }
-            if( args.NodesToBrowse[n].ResultMask      !== undefined && args.NodesToBrowse[n].ResultMask      !== null ){ uaBD.ResultMask      = args.NodesToBrowse[n].ResultMask; }
+            if( isDefined( args.NodesToBrowse[n].BrowseDirection ) ) { uaBD.BrowseDirection = args.NodesToBrowse[n].BrowseDirection; }
+            if( isDefined( args.NodesToBrowse[n].IncludeSubtypes ) ) { uaBD.IncludeSubtypes = args.NodesToBrowse[n].IncludeSubtypes; }
+            if( isDefined( args.NodesToBrowse[n].NodeClass       ) ) { uaBD.NodeClassMask   = args.NodesToBrowse[n].NodeClass; }
+            if( isDefined( args.NodesToBrowse[n].ReferenceTypeId ) ) { uaBD.ReferenceTypeId = args.NodesToBrowse[n].ReferenceTypeId; }
+            if( isDefined( args.NodesToBrowse[n].ResultMask      ) ) { uaBD.ResultMask      = args.NodesToBrowse[n].ResultMask; }
             // add this browseDescription to the request
             if( !args.SuppressMessaging ) print( "\t[" + n + "] NodeId: " + uaBD.NodeId
                     + "; BrowseDirection: " + BrowseDirection.toString( uaBD.BrowseDirection )

@@ -263,7 +263,7 @@ Assert.LocalizedTextIsNull = function( actualText, message ) {
 
 Assert.StatusCodeIs = function( expectedStatusCode, actualUaStatusCode, message, successMessage ) {
     // was 'expectedStatusCode' our ExpectedAndAccepted object? if so, use its features instead!
-    var result = true;
+    var result = false;
     if( isDefined( expectedStatusCode.containsStatusCode ) ) result = expectedStatusCode.containsStatusCode( actualUaStatusCode );
     else if( actualUaStatusCode.StatusCode === expectedStatusCode ) result = true;
     if( !result ) addError( ( isDefined( message ) ? message + " " : "" ) + "Received: " + actualUaStatusCode + ". " + expectedStatusCode.toString(), actualUaStatusCode );

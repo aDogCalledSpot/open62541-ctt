@@ -557,35 +557,30 @@ MonitoredItem.GetValuesToString = function( args ) {
     return( s );
 }// MonitoredItem.GetValuesToString = function( args ) 
 
+// Creates an array of MonitoredItem objects from an Array of BrowsePathTargets (TranslateBrowsePathsToNodeIds)
+// Parameters:
+//    - BrowsePathTargets [UaBrowsePathTargets]:
+MonitoredItem.FromBrowsePathTargets = function( args ) {
+    var items = [];
+    if( isDefined( args ) && isDefined( args.BrowsePathTargets ) && isDefined( args.BrowsePathTargets.length ) ) {
+        var nodeIds = []; // place to store the node ids
+        for( var i=0; i<args.BrowsePathTargets.length; i++ ) nodeIds.push( args.BrowsePathTargets[i].NodeId.NodeId );
+        items = MonitoredItem.fromNodeIds( nodeIds );
+    }
+    return( items );
+}
 
-/* TESTING
-function MonitoredItem( nodeId, clientHandle, attributeId, indexRange, monitorMode, discardOldest, filter, queue, interval, timestampsToReturn )
-// no params, should fault
-include( "./library/Base/assertions.js" );
-try{var m=new MonitoredItem();print("success????");}catch(exception){print( "Exception, as expected" );}
-// 1 param, should fault
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ) );;print("success :(");}catch(exception){print( "Exception, as expected" );}
-// 2 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0 );Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);}catch(exception){print("Failed: ClientHandle");}
-// 3 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value );Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(Attribute.Value, m.AttributeId);}catch(exception){print("Failed: Attribute.Value");}
-// 4 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2" );Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);}catch(exception){print("Failed???");}
-// 5 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting );Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);}catch(exception){print("Failed???");}
-// 6 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting, true );Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);Assert.Equal(true, m.DiscardOldest);}catch(exception){print("Failed???");}
-// 7 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting, true, "filter");Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);Assert.Equal(true, m.DiscardOldest);Assert.Equal("filter",m.Filter);}catch(exception){print("Failed???");}
-// 8 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting, true, "filter", 10);Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);Assert.Equal(true, m.DiscardOldest);Assert.Equal("filter",m.Filter);Assert.Equal(10,m.QueueSize);}catch(exception){print("Failed???");}
-// 9 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting, true, "filter", 10, 1000);Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);Assert.Equal(true, m.DiscardOldest);Assert.Equal("filter",m.Filter);Assert.Equal(10,m.QueueSize);Assert.Equal(1000,m.SamplingInterval);}catch(exception){print("Failed???");}
-// 10 params, should work
-try{var m=new MonitoredItem( new UaNodeId( Identifier.Server, 0 ), 0, Attribute.Value, "1:2", MonitoringMode.Reporting, true, "filter", 10, 1000, TimestampsToReturn.Both);Assert.StringNotNullOrEmpty(m.NodeId,"NodeId");Assert.Equal(0, m.ClientHandle);Assert.Equal(Attribute.Value, m.AttributeId);Assert.Equal("1:2",m.IndexRange);Assert.Equal(MonitoringMode.Reporting, m.MonitoringMode);Assert.Equal(true, m.DiscardOldest);Assert.Equal("filter",m.Filter);Assert.Equal(10,m.QueueSize);Assert.Equal(1000,m.SamplingInterval);Assert.Equal(TimestampsToReturn.Both,m.TimestampsToReturn);}catch(exception){print("Failed???");}
-var nid = UaNodeId.fromString( "ns=0;s=12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890" );
-var mi = MonitoredItem.fromNodeIds( [nid] )[0];
-print( nid );
-print( mi.NodeId );
-print( mi.SafeNodeId() );
-*/
+// Creates an array of MonitoredItem objects from an array of BrowsePathResults.
+// Parameters:
+//    - BrowsePathResults [UaBrowsePathResults]: 
+MonitoredItem.FromBrowsePathResults = function( args ) {
+    var items = [];
+    if( isDefined( args ) && isDefined( args.BrowsePathResults ) && isDefined( args.BrowsePathResults.length ) ) {
+        var nodeIds = []; // place to store the node ids
+        for( var i=0; i<args.BrowsePathResults.length; i++ ) {
+            for( var t=0; t<args.BrowsePathResults[i].Targets.length; t++ ) nodeIds.push( args.BrowsePathResults[i].Targets[t].TargetId.NodeId );
+        }
+        items = MonitoredItem.fromNodeIds( nodeIds );
+    }
+    return( items );
+}

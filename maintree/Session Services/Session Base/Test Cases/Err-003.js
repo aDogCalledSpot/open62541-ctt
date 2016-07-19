@@ -4,7 +4,7 @@
 
 function createSession561err003() {
     // this test needs a SECURE channel
-    if( epSecureEncrypt === null ) { 
+    if( !isDefined( epSecureEncrypt ) ) { 
         addSkipped( "Secure channel unavailable. Skipping test." );
         return( false );
     }

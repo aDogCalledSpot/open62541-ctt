@@ -71,8 +71,8 @@ function TranslateBrowsePathsToNodeIdsService( args ) {
         if( this.UaStatus.isGood() ) {
             result = UaResponseHeader.IsValid( { Service: this, ServiceResult: args.ServiceResult, SuppressMessaging: args.SuppressMessaging, SuppressErrors: args.SuppressErrors, ServiceInfo: "BrowsePaths:#" + this.Request.BrowsePaths.length } );
             if( result ) {
-                if( isDefined( args.OperationResults ) ) result = checkTranslateBrowsePathsToNodeIdsError( this.Request, this.Response, args.OperationResults, args.SuppressMessaging );
-                if( isDefined( args.ExpectedResults ) ) result = checkTranslateBrowsePathsToNodeIdsError( this.Request, this.Response, args.ExpectedResults, args.SuppressMessaging );
+                if( isDefined( args.OperationResults ) ) { result = checkTranslateBrowsePathsToNodeIdsError( this.Request, this.Response, args.OperationResults, args.SuppressMessaging ); }
+                else if( isDefined( args.ExpectedResults ) ) { result = checkTranslateBrowsePathsToNodeIdsError( this.Request, this.Response, args.ExpectedResults, args.SuppressMessaging ); }
                 else result = checkTranslateBrowsePathsToNodeIdsValidParameter( this.Request, this.Response );
             }
         }

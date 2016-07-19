@@ -1,5 +1,5 @@
 <UaProfiles xsi:noNamespaceSchemaLocation="uaprofiles.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
- <ProjectInfo ProjectType="ServerProject" ProjectProfile="Standard" ScriptVersion="256" Version="1.2.336.256"/>
+ <ProjectInfo ProjectType="ServerProject" ProjectProfile="Standard" ScriptVersion="273" Version="1.2.336.273"/>
  <Categories>
   <Category description="Profiles of this category specify a security policy. The URI of such profiles has to be part of an Endpoint Description returned from the GetEndpoint service." name="Security"/>
   <Category description="Profiles of this category specify a complete functional set for an OPC UA Server. The URI of such profiles has to be part of a Software Certificate returned with the CreateSession service response." name="Server"/>
@@ -21,7 +21,7 @@
     <ConformanceUnit category="Server" description="Support the NodeClasses with their Attributes and behaviour as defined in OPC UA Part 3. This includes for instance: Object, Object Type, Variable, Variable Type, References and Data Type" name="Address Space Base" used="true">
      <InitTestCase description="" name="initialize.js" filename="Address Space Model/Address Space Base/Test Cases/initialize.js" checkedState="0"/>
      <TestCases>
-      <TestCase description="Walks through the address space checking each Node contains the mandatory attributes, references and properties. 250 nodes checked as defined by a constant at the top of the script." name="001.js" filename="Address Space Model/Address Space Base/Test Cases/001.js" checkedState="0"/>
+      <TestCase description="Walks through the address space checking each Node contains the mandatory attributes, references and properties. Number of nodes checked is defined by a constant at the top of the script." name="001.js" filename="Address Space Model/Address Space Base/Test Cases/001.js" checkedState="0"/>
       <TestCase description="Root node has Objects, Types, and Views" name="002.js" filename="Address Space Model/Address Space Base/Test Cases/002.js" checkedState="0"/>
      </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Address Space Model/Address Space Base/Test Cases/cleanup.js" checkedState="0"/>
@@ -228,7 +228,22 @@
     </ConformanceUnit>
     <ConformanceUnit category="Server" description="The Server supports Diagnostic Objects and Variables." name="Base Info Diagnostics" used="true">
      <InitTestCase description="" name="initialize.js" filename="Base Information/Base Info Diagnostics/Test Cases/initialize.js" checkedState="0"/>
-     <TestCases/>
+     <TestCases>
+      <TestCase description="Read ServerDiagnostics BrowseName" name="001.js" filename="Base Information/Base Info Diagnostics/Test Cases/001.js" checkedState="0"/>
+      <TestCase description="Check CurrentSessionCount and CumulatedSessionCount" name="003.js" filename="Base Information/Base Info Diagnostics/Test Cases/003.js" checkedState="0"/>
+      <TestCase description="Check SamplingIntervalDiagnosticsArray" name="004.js" filename="Base Information/Base Info Diagnostics/Test Cases/004.js" checkedState="0"/>
+      <TestCase description="Check SubscriptionDiagnosticsArray" name="005.js" filename="Base Information/Base Info Diagnostics/Test Cases/005.js" checkedState="0"/>
+      <TestCase description="Check SubscriptionDiagnosticsArray in real time" name="006-010.js" filename="Base Information/Base Info Diagnostics/Test Cases/006-010.js" checkedState="0"/>
+      <TestCase description="Verify ModifyCount subscription diagnostic." name="011.js" filename="Base Information/Base Info Diagnostics/Test Cases/011.js" checkedState="0"/>
+      <TestCase description="Check RepublishMessageCount subscription diagnostic" name="012.js" filename="Base Information/Base Info Diagnostics/Test Cases/012.js" checkedState="0"/>
+      <TestCase description="Check PublishRequestCount and DataChangeNotificationsCount subscription diagnostics" name="013.js" filename="Base Information/Base Info Diagnostics/Test Cases/013.js" checkedState="0"/>
+      <TestCase description="Check DisabledMonitoredItemCount diagnostics property" name="014.js" filename="Base Information/Base Info Diagnostics/Test Cases/014.js" checkedState="0"/>
+      <TestCase description="Check MonitoringQueueOverflowCount subscription diagnostic" name="015.js" filename="Base Information/Base Info Diagnostics/Test Cases/015.js" checkedState="0"/>
+      <TestCase description="Check Current/CumulatedSubscriptionCount" name="016.js" filename="Base Information/Base Info Diagnostics/Test Cases/016.js" checkedState="0"/>
+      <TestCase description="Repeat Current/CumulatedSubscriptionCount" name="017.js" filename="Base Information/Base Info Diagnostics/Test Cases/017.js" checkedState="0"/>
+      <TestCase description="Check ServerDiagnotics.EnabledFlag." name="018.js" filename="Base Information/Base Info Diagnostics/Test Cases/018.js" checkedState="0"/>
+      <TestCase description="Test sessions are added SessionsDiagnosticsSummary" name="019.js" filename="Base Information/Base Info Diagnostics/Test Cases/019.js" checkedState="0"/>
+     </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Base Information/Base Info Diagnostics/Test Cases/cleanup.js" checkedState="0"/>
     </ConformanceUnit>
     <ConformanceUnit category="Server" description="The Server supports the EventQueueOverflowEventType as defined in Part 4." name="Base Info EventQueueOverflowEventType" used="true">
@@ -263,7 +278,10 @@
     </ConformanceUnit>
     <ConformanceUnit category="Server" description="The Server supports the VariableType OptionSet." name="Base Info ValueAsText" used="true">
      <InitTestCase description="" name="initialize.js" filename="Base Information/Base Info ValueAsText/Test Cases/initialize.js" checkedState="0"/>
-     <TestCases/>
+     <TestCases>
+      <TestCase description="Check ValueAsText property on ALL configured nodes" name="001.js" filename="Base Information/Base Info ValueAsText/Test Cases/001.js" checkedState="0"/>
+      <TestCase description="Subscribe to ValueAsText property while changing values" name="002.js" filename="Base Information/Base Info ValueAsText/Test Cases/002.js" checkedState="0"/>
+     </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Base Information/Base Info ValueAsText/Test Cases/cleanup.js" checkedState="0"/>
     </ConformanceUnit>
     <ConformanceUnit category="Server" description="The Server supports publishing of the Server limitation in the ServerCapabilities, including MaxArrayLength, MaxStringLength, MaxNodePerRead, MaxNodesPerWrite, MaxNodesPerSubscription and MaxNodesPerBrowse." name="Base Info Server Capabilities" used="true">
@@ -284,6 +302,7 @@
     <ConformanceUnit category="Server" description="The Server exposes a Type System with DataTypes, ReferenceTypes, ObjectTypes and VariableTypes including all of the OPC Foundation provided (namespace 0) types that are used by the Server,as defined in Part 5. Items that are defined in NameSpace 0 but are defined in other specification parts are tested as part of the other information models." name="Base Info Type System" used="true">
      <InitTestCase description="" name="initialize.js" filename="Base Information/Base Info Type System/Test Cases/initialize.js" checkedState="0"/>
      <TestCases>
+      <TestCase description="Level 1 folders exist" name="001.js" filename="Base Information/Base Info Type System/Test Cases/001.js" checkedState="0"/>
       <TestCase description="Type definitions for UA Part 3 (Address space)" name="003.js" filename="Base Information/Base Info Type System/Test Cases/003.js" checkedState="0"/>
       <TestCase description="Type definitions for UA Part 4 (Services)" name="004.js" filename="Base Information/Base Info Type System/Test Cases/004.js" checkedState="0"/>
       <TestCase description="Type definitions for UA Part 5 (Information Model)" name="005.js" filename="Base Information/Base Info Type System/Test Cases/005.js" checkedState="0"/>
@@ -1016,7 +1035,17 @@
     </ConformanceUnit>
     <ConformanceUnit category="Security" description="A public/private key pair. Must be able to be adminstrativly disabled" name="Security User X509" used="true">
      <InitTestCase description="" name="initialize.js" filename="Security/Security User X509/Test Cases/initialize.js" checkedState="0"/>
-     <TestCases/>
+     <TestCases>
+      <TestCase description="Valid certificate for a valid connection" name="001.js" filename="Security/Security User X509/Test Cases/001.js" checkedState="0"/>
+      <TestCase description="Valid certificate for not-trusted user." name="002.js" filename="Security/Security User X509/Test Cases/002.js" checkedState="0"/>
+      <TestCase description="Not yet valid certificate; trusted" name="004.js" filename="Security/Security User X509/Test Cases/004.js" checkedState="0"/>
+      <TestCase description="Expired certificate" name="005.js" filename="Security/Security User X509/Test Cases/005.js" checkedState="0"/>
+      <TestCase description="Revoked user X509 cert." name="006.js" filename="Security/Security User X509/Test Cases/006.js" checkedState="0"/>
+      <TestCase description="ApplicationInstanceCertificate instead." name="007.js" filename="Security/Security User X509/Test Cases/007.js" checkedState="0"/>
+      <TestCase description="Specify different PolicyId" name="008.js" filename="Security/Security User X509/Test Cases/008.js" checkedState="0"/>
+      <TestCase description="Invalid user certificate." name="009.js" filename="Security/Security User X509/Test Cases/009.js" checkedState="0"/>
+      <TestCase description="Trusted, Issued X509 user certificate" name="011.js" filename="Security/Security User X509/Test Cases/011.js" checkedState="0"/>
+     </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Security/Security User X509/Test Cases/cleanup.js" checkedState="0"/>
     </ConformanceUnit>
     <ConformanceUnit category="Security" description="Certificate will be validated as specified in OPC UA Part 4. This includes among others structure and signature examination. Allowing for some validation errors to be suppressed by administration directive." name="Security Certificate Validation" used="true">
@@ -1030,6 +1059,7 @@
       <TestCase description="Secure channel. Certificate signed with wrong key. Expects BadSecurityChecksFailed." name="010.js" filename="Security/Security Certificate Validation/Test Cases/010.js" checkedState="0"/>
       <TestCase description="Secure channel. Certificate contains incorrect IP/hostname. Expects Good or BadCertificateHostNameInvalid." name="011.js" filename="Security/Security Certificate Validation/Test Cases/011.js" checkedState="0"/>
       <TestCase description="Connect with expired/untrusted certificate" name="033.js" filename="Security/Security Certificate Validation/Test Cases/033.js" checkedState="0"/>
+      <TestCase description="Encrypted channel using Revoked certificate" name="038.js" filename="Security/Security Certificate Validation/Test Cases/038.js" checkedState="0"/>
      </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Security/Security Certificate Validation/Test Cases/cleanup.js" checkedState="0"/>
     </ConformanceUnit>
@@ -1047,6 +1077,16 @@
       <TestCase description="Insecure channel. Activate a session, but do not pass certificates or nonce. Expects connection success." name="004.js" filename="Security/Security None CreateSession ActivateSession/Test Cases/004.js" checkedState="0"/>
      </TestCases>
      <CleanupTestCase description="" name="cleanup.js" filename="Security/Security None CreateSession ActivateSession/Test Cases/cleanup.js" checkedState="0"/>
+    </ConformanceUnit>
+    <ConformanceUnit category="Security" description="The CreateSession and ActivateSession backwards compatibility to 1.01" name="Security None CreateSession ActivateSession 1.01" used="true">
+     <InitTestCase description="" name="initialize.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/initialize.js" checkedState="0"/>
+     <TestCases>
+      <TestCase description="1.01 Client passes a Certificate" name="001.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/001.js" checkedState="0"/>
+      <TestCase description="Send expired client certificate" name="002.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/002.js" checkedState="0"/>
+      <TestCase description="Send certificate for different computer" name="003.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/003.js" checkedState="0"/>
+      <TestCase description="Send corrupted certificate" name="004.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/004.js" checkedState="0"/>
+     </TestCases>
+     <CleanupTestCase description="" name="cleanup.js" filename="Security/Security None CreateSession ActivateSession 1.01/Test Cases/cleanup.js" checkedState="0"/>
     </ConformanceUnit>
     <ConformanceUnit category="Security" description="A suite of algorithms that uses RSA15 as Key-Wrap-algorithm and 128-Bit for encryption algorithms.&#xa;SymmetricSignatureAlgorithm&#x9;HmacSha1&#x9;(http://www.w3.org/2000/09/xmldsig#hmac-sha1)&#xa;SymmetricEncryptionAlgorithm&#x9;Aes128&#x9;(http://www.w3.org/2001/04/xmlenc#a" name="Security Basic 128Rsa15" used="true">
      <InitTestCase description="" name="initialize.js" filename="Security/Security Basic 128Rsa15/Test Cases/initialize.js" checkedState="0"/>
@@ -1068,7 +1108,6 @@
      <TestCases>
       <TestCase description="Create secure channel using Basic 256; Sign only. Expects success." name="001.js" filename="Security/Security Basic 256/Test Cases/001.js" checkedState="0"/>
       <TestCase description="Create secure channel using Basic 256 Sign&amp;Encrypt. Expects success." name="002.js" filename="Security/Security Basic 256/Test Cases/002.js" checkedState="0"/>
-      <TestCase description="Create secure channel using Basic 256, but encrypt using 128Rsa15. Expects no response." name="003.js" filename="Security/Security Basic 256/Test Cases/003.js" checkedState="0"/>
       <TestCase description="DoS attempt by consuming Channels" name="004.js" filename="Security/Security Basic 256/Test Cases/004.js" checkedState="0"/>
       <TestCase description="DoS attack #2; consume SecureChannels, but CreateSessions in some." name="005.js" filename="Security/Security Basic 256/Test Cases/005.js" checkedState="0"/>
      </TestCases>
@@ -1205,6 +1244,8 @@
       <TestCase description="ActivateSession: Provide no software certificates." name="009.js" filename="Session Services/Session Base/Test Cases/009.js" checkedState="0"/>
       <TestCase description="CloseSession: Default parameters." name="010.js" filename="Session Services/Session Base/Test Cases/010.js" checkedState="0"/>
       <TestCase description="CloseSession: Call CloseSession 100x in a loop." name="011.js" filename="Session Services/Session Base/Test Cases/011.js" checkedState="0"/>
+      <TestCase description="Test MAX # of supported sessions" name="012.js" filename="Session Services/Session Base/Test Cases/012.js" checkedState="0"/>
+      <TestCase description="No SessionName specified" name="013.js" filename="Session Services/Session Base/Test Cases/013.js" checkedState="0"/>
       <TestCase description="CreateSession: Create 2 Sessions. Use the same nonce twice!" name="Err-001.js" filename="Session Services/Session Base/Test Cases/Err-001.js" checkedState="0"/>
       <TestCase description="CreateSession: Invalid ClientNonce length" name="Err-002.js" filename="Session Services/Session Base/Test Cases/Err-002.js" checkedState="0"/>
       <TestCase description="CreateSession: Send ClientCertificate for wrong application (attempted spoofing)." name="Err-003.js" filename="Session Services/Session Base/Test Cases/Err-003.js" checkedState="0"/>
@@ -1757,7 +1798,9 @@
    <IncludeProfiles/>
   </Profile>
   <Profile category="Server" description="defines a Profile which is appropriate only for small devices with limited resources, including the inability to include a security infrastructure. It is expected that most applications will use gateways that enhance the functionality of these Servers to" uri="http://opcfoundation.org/UA-Profile/Server/MicroEmbeddedDevice" name="Micro Embedded Device Server">
-   <IncludeConformanceUnits/>
+   <IncludeConformanceUnits>
+    <IncludeConformanceUnit optional="false" group="View Services" name="Security None CreateSession ActivateSession 1.01"/>
+   </IncludeConformanceUnits>
    <IncludeProfiles>
     <IncludeProfile name="Nano Embedded Device Server Profile"/>
     <IncludeProfile name="Embedded DataChange Subscription Server Facet"/>

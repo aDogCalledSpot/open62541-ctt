@@ -49,5 +49,5 @@ function revertToOriginalValues() {
         expectedResults[i] = new ExpectedAndAcceptedResults( StatusCode.Good );
         expectedResults[i].addExpectedResult( StatusCode.BadWriteNotSupported );
     }
-    WriteHelper.Execute( { NodesToWrite:items, OperationResults:expectedResults, CheckNotSupported:true } );
+    WriteHelper.Execute( { NodesToWrite:items, OperationResults:expectedResults, CheckNotSupported:true, ReadVerification: false } );
 }

@@ -17,12 +17,15 @@ function activateSession562err009() {
         var expectedResult = new ExpectedAndAcceptedResults( StatusCode.Good );
         for( var i=0; i<notSupportedToken.length(); i++ ) {
             switch ( notSupportedToken._values[i] ) {
-                case "X509":     ActivateSessionHelper.Execute( { 
-                                     Session: session, 
-                                     UserIdentityToken: UaUserIdentityToken.FromUserCredentials( { 
-                                         Session: session,
-                                         UserCredentials: UserCredentials.createFromSettings( PresetCredentials.X509, UserTokenType.Certificate ) } ),
-                                     ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadIdentityTokenInvalid ) } );
+                case "X509":     try {
+                                    ActivateSessionHelper.Execute( {
+                                         Session: session, 
+                                         UserIdentityToken: UaUserIdentityToken.FromUserCredentials( { 
+                                             Session: session,
+                                             UserCredentials: UserCredentials.createFromSettings( PresetCredentials.X509, UserTokenType.Certificate ) } ),
+                                         ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadIdentityTokenInvalid ) } );
+                                 }
+                                 catch( ex ) { addSkipped( "UserX509Certificate is not supported in the Server, but could not be tested because '" + ex + "'." ); }
                                  break;
                 case "Anonymous": ActivateSessionHelper.Execute(  {
                                      Session: session, 
@@ -32,13 +35,13 @@ function activateSession562err009() {
                                      ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadIdentityTokenInvalid ) } );
                                  break;
                 case "User": ActivateSessionHelper.Execute( { 
-                                    Session: Test.Session.Session, 
+                                    Session: session, 
                                     UserIdentityToken: UaUserIdentityToken.FromUserCredentials( {
                                         Session: session,
                                         UserCredentials: UserCredentials.createFromSettings( PresetCredentials.AccessGranted1, UserTokenType.UserName ) } ),
                                     ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadIdentityTokenInvalid ) } );
                                     break;
-                case "Kerberos": addSkipped( "Cannot complete test. Kerberos token is the only missing token, and is currently not supported in the CTT!" ); 
+                case "Kerberos": addSkipped( "Cannot complete test. Kerberos token is currently not supported in the CTT!" ); 
                                  break;
                 default: addSkipped( "Cannot complete test. Server supports all UserIdentityToken types, therefore, we can't use one that is not supported." ); 
                                  break;

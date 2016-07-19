@@ -25,9 +25,9 @@ function applicationCertificates003() {
                                              UserIdentityToken: UaUserIdentityToken.FromUserCredentials( { 
                                                      Session: Test.Session,
                                                      UserCredentials: new UserCredentials( { policy: UserTokenType.Anonymous } ) } ) } ) ) { 
-            CloseSessionHelper.Execute( { Session: Test.Session } );
             // check if the server returned a nonce or certificate.
             showCreateSessOptionalResponses( Test.Session.Response );
+            Test.Disconnect();
         }
     }
     return( Assert.True( result, "No endpoint found supporting an inecure channel supporting anonymous authentication.", "Successfully created a NON-SECURE channel and logged-in anonymously while passing a certificate, but not a nonce." ) );

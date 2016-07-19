@@ -79,8 +79,8 @@ function WriteService( args ) {
             result = UaResponseHeader.IsValid( { Service: this, ServiceResult: args.ServiceResult, SuppressMessaging: args.SuppressMessaging, SuppressErrors: args.SuppressErrors, ServiceInfo: "NodesToWrite #" + this.Request.NodesToWrite.length } );
             if( result ) {
                 var settingNames = MonitoredItem.GetSettingNames( args.NodesToWrite );
-                if( isDefined( args.OperationResults ) ) this.writeSuccess = checkWriteError( this.Request, this.Response, args.OperationResults, args.ReadVerification, settingNames, args.CheckNotSupported, this.Session );
-                else this.writeSuccess = ( checkWriteValidParameter( this.Request, this.Response, args.ReadVerification, settingNames, undefined, args.SuppressMessaging, this.Session ) );
+                if( isDefined( args.OperationResults ) ) this.writeSuccess = checkWriteError( this.Request, this.Response, args.OperationResults, args.ReadVerification, settingNames, args.CheckNotSupported, session );
+                else this.writeSuccess = ( checkWriteValidParameter( this.Request, this.Response, args.ReadVerification, settingNames, undefined, args.SuppressMessaging, session ) );
             }
         }
         else {

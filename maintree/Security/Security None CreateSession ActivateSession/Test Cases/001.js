@@ -26,7 +26,7 @@ function applicationCertificates001() {
                                              UserIdentityToken: UaUserIdentityToken.FromUserCredentials( {
                                                       Session: Test.Session,
                                                       UserCredentials: new UserCredentials( { policy:UserTokenType.Anonymous } ) } ) } ) ) {
-              CloseSessionHelper.Execute( { Session: Test.Session } );
+              Test.Disconnect();
         }
         else result = false;
     }

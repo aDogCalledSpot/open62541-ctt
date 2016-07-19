@@ -1,8 +1,8 @@
 // Return a referenceTypeId of which at least three references are of the type.
 function GetReferenceTypeWithThreeReferences( nodeToBrowse, Session ) {
     var references = GetDefaultReferencesFromNodeId( Session, nodeToBrowse );
-    for( var i = 0; i < references.length; i++ ) {
-        typeCount = 0;
+    for( var i=0; i<references.length; i++ ) {
+        typeCount = 1;
         for( var n = i + 1; n < references.length; n++ ) {
             if( references[i].ReferenceTypeId.equals( references[n].ReferenceTypeId ) ) {
                 typeCount++;

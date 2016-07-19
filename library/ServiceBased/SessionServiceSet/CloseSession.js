@@ -19,7 +19,7 @@ function CloseSessionService() {
         var result = true;
         var session = isDefined( args.Session.Session )? args.Session.Session : args.Session;
         // check if the session is already closed
-        if( isDefined( args.Session.Connected ) && args.Session.Connected ) return( true );
+        if( isDefined( args.Session.Connected ) && !args.Session.Connected ) return( true );
         // build the request
         this.Request = new UaCloseSessionRequest();
         session.buildRequestHeader( this.Request.RequestHeader );
@@ -29,6 +29,7 @@ function CloseSessionService() {
         this.Response = new UaCloseSessionResponse();
         if( isDefined( args.PreHook ) ) args.PreHook();
         this.Result = session.closeSession( this.Request, this.Response );
+        print( "CloseSession().Result: " + this.Response.ResponseHeader.ServiceResult );
         if( this.Result.isGood() ) {
             result = UaResponseHeader.IsValid( { Service: this, ServiceResult: args.ServiceResult, SuppressMessaging: args.SuppressMessaging, ServiceInfo: "DeleteSubscriptions=" + this.Request.DeleteSubscriptions } );
         }

@@ -3,10 +3,6 @@
       See the bottom of this file for an example on using it.
 */
 
-include( "./library/Base/warnOnce.js" );
-include( "./library/Base/certificates.js" );
-include( "./library/Base/Objects/expectedResults.js" )
-
 function GetEndpointsService( args ) {
     this.Name = "GetEndpoints";
     this.Session = null;

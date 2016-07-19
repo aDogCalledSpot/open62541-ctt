@@ -166,7 +166,7 @@ function write582007() {
     }//for
 
     //WRITE the nodes.
-    if( WriteHelper.Execute( { NodesToWrite: items, OperationResults: expectedResults, CheckNotSupported: true } ) ) {
+    if( WriteHelper.Execute( { NodesToWrite: items, OperationResults: expectedResults, CheckNotSupported: true, ReadVerification: false } ) ) {
         // we now need to read-back the arrays and make sure that ONLY the first three elements
         // were written. We can compare the current values to the originals that were read in initialize.js.
         // request an index range of 0:3; (to include the additional item)

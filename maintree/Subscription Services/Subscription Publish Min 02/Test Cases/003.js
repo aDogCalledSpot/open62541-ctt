@@ -1,5 +1,5 @@
-/*  Test prepared by Nathan Pocock; nathan.pocock@opcfoundation.org
-    Description: Modify a subscription and check the async Publish response timings. */
+/*  Test prepared by Micahel Gagne / Nathan Pocock; nathan.pocock@opcfoundation.org
+    Description: Modify a subscription and check the async Publish response timings.  */
 
 // store a copy of the Publish Request and Response objects for later analysis
 var pubRequests = [];
@@ -145,6 +145,12 @@ function asyncPublish5102022() {
         }while( getWaitingCount() > 0 && abortWaitAtTime > UaDateTime.utcNow() );
         print( "Publish responses received (#2): " + pubResponses.length );
 
+        // Before publish looping perform a write to ensure there is a data change waiting
+        // to avoid having to wait for a keep alive (which is longer than the publish interval)
+        // write a value and call Publish(); just to ensure that a datachange is received 
+        // and that the new publishing interval will come into effect 
+        UaVariant.Increment( { Value: monitoredItems[0].Value } );
+        WriteHelper.Execute( { NodesToWrite:monitoredItems[0], ReadVerification:false } );
 
         // in a loop of 3 iterations call Publish() and invoke a write (from within the Publish response handler).
         doWriteInCallback = true;

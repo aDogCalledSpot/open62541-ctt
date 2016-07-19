@@ -1,10 +1,10 @@
-include( "./library/Base/warnOnce.js" );
-include( "./library/Base/Objects/hostnames.js" );
-include( "./library/Base/StringMatching.js" );
+/* "P" related classes and helpers, including:
+    - UaPkiCertificate.IsValid = function( cert, currentEndpointUrl )
+*/
 
+UaPkiCertificate.IsValid = function( cert, currentEndpointUrl ) {
 
-// Validates a URN. See http://www.rfc-editor.org/rfc/rfc3305.txt
-function ValidateURN( urn ){
+this.ValidateURN = function( urn ){
     if( urn === undefined || urn === null || urn.length === 0 ) {
         addError( "URN validation: URN not specified, is empty or null." );
         return( false );
@@ -37,7 +37,7 @@ function ValidateURN( urn ){
 
 
 // Validates a URL
-function ValidateURL( url, showErr ){
+this.ValidateURL = function( url, showErr ){
     if( showErr === undefined || showErr === null ) showErr = true;
     if( url === undefined || url === null || url.length === 0 ) {
         if( showErr ) addError( "URL validation: URL not specified, is empty or null." );
@@ -57,10 +57,6 @@ function ValidateURL( url, showErr ){
     return( true );
 }// function ValidateURL( url, showErr )
 
-
-
-// Validate a certificate using the guidelines described in UA Part table 101.
-function ServerCertificateIsValid( cert, currentEndpointUrl ) {
     if( cert === undefined || cert === null || currentEndpointUrl === undefined || currentEndpointUrl === null ) throw( "checkCertificateIsValid argument error. Missing 'cert' or 'currentEndpointUrl'." );
     var errMsg = "";
     var warnMsg = "";
@@ -70,6 +66,7 @@ function ServerCertificateIsValid( cert, currentEndpointUrl ) {
     pkiProvider.CertificateRevocationListLocation = readSetting( "/Advanced/Certificates/CertificateRevocationListLocation" );
     pkiProvider.PkiType = PkiType.OpenSSL;
     // Certificate Structure
+    var serverCertificate = null;
     if( true ) {
         // validate the server certificate
         var validationStatus = pkiProvider.validateCertificate( cert );
@@ -78,7 +75,7 @@ function ServerCertificateIsValid( cert, currentEndpointUrl ) {
             return( false );
         }
         // go ahead and validate the certificate parameters. Useful info for programmers. Check the hostnames match in the server certificate and endpointUrls
-        var serverCertificate = UaPkiCertificate.fromDER( cert );
+        serverCertificate = UaPkiCertificate.fromDER( cert );
     }
     // Signature
     if( true ) {
@@ -115,7 +112,7 @@ function ServerCertificateIsValid( cert, currentEndpointUrl ) {
     if( true ) {
         if( serverCertificate.Hostnames == null || serverCertificate.Hostnames.length == 0 ) errMsg += "\n\tServer Certificate DNS is empty.";
         // get hostname from endpoint url
-        var serverEndpointUrlHostname = getHostnameFromUrl( currentEndpointUrl );
+        var serverEndpointUrlHostname = HostnameFromUrl( currentEndpointUrl );
         // get hostname from certificate
         var serverCertificateHostName;
         if( serverCertificate.Hostnames !== null && serverCertificate.Hostnames.length > 0 ) serverCertificateHostName = serverCertificate.Hostnames[0];
@@ -131,8 +128,8 @@ function ServerCertificateIsValid( cert, currentEndpointUrl ) {
     }
     // URI
     if( true ) {
-        if( !ValidateURL( serverCertificate.ApplicationUri, false ) ) {
-            if( !ValidateURN( serverCertificate.ApplicationUri ) ) errMsg += "\tServer Certificate URI is not a valid URL or URI.";
+        if( !this.ValidateURL( serverCertificate.ApplicationUri, false ) ) {
+            if( !this.ValidateURN( serverCertificate.ApplicationUri ) ) errMsg += "\tServer Certificate URI is not a valid URL or URI.";
         }
     }
     // Certificate Usage
@@ -152,6 +149,15 @@ function ServerCertificateIsValid( cert, currentEndpointUrl ) {
                 }
             }
         }
+    }
+    // key length
+    if( true ) {
+        // NP 4/20/2016: Need a better way to determine key-size which is currently available
+        //               as a bytestring only, and does not provide any way to attain the 
+        //               separate components (algorithm and key).
+        var keyLen = 8 * serverCertificate.PublicKey.length;
+        if( keyLen >= 1024 && keyLen < 2048 ) _warning.store( "Server's certificate key size is 1024 bits, which is deprecated." );
+        if( keyLen >= 2048 && keyLen < 4096 ) addLog( "Server's certificate key size is 2048 bits, which is acceptable." );
     }
     // Trust List Check (none)
     // Find Issuer Certificate

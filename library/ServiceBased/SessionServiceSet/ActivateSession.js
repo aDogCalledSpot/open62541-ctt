@@ -6,7 +6,6 @@
         expectErrorNotFail - (OPTIONAL) True = expect ERROR; False = expect FAILURE */
         
 include( "library/Base/identity.js" );        
-include( "library/Base/certificates.js" );
 
 function ActivateSessionService() {
     this.Name = "ActivateSession";  // Name of this service
@@ -56,8 +55,27 @@ function ActivateSessionService() {
         }
 
         // User identity token.
-        if( isDefined( args.UserIdentityToken ) ) this.Request.UserIdentityToken = args.UserIdentityToken;
-        else this.Request.UserIdentityToken = UaUserIdentityToken.FromUserCredentials( { Session: args.Session, UserCredentials: UserCredentials.createFromSettings( PresetCredentials.AccessGranted1 ) } );
+        if( isDefined( args.UserIdentityToken ) ) {
+            try{
+                this.Request.UserIdentityToken = args.UserIdentityToken;
+                if( this.Request.UserIdentityToken.TypeId.NodeId.equals( new UaNodeId( Identifier.X509IdentityToken_Encoding_DefaultBinary ) ) ) {
+                    var c = args.UserIdentityToken.toX509IdentityToken();
+                    // create a signature, but only if not already specified
+                    if( isDefined( args.UserTokenSignature ) ) this.Request.UserTokenSignature = args.UserTokenSignature;
+                    else {
+                        var u = UaSignatureData.New( { Algorithm: SecurityPolicy.policyToString( args.Session.Channel.Channel.RequestedSecurityPolicyUri ), Session: args.Session } );
+                        this.Request.UserTokenSignature = u;
+                    }
+                }
+            }
+            catch( ex ) {
+                throw( "ActivateSession.UserIdentityToken could not be set: '" + ex + "'." );
+            }
+        }
+        else this.Request.UserIdentityToken = UaUserIdentityToken.FromUserCredentials( { 
+            Session: args.Session, 
+            Endpoints: args.Endpoints,
+            UserCredentials: UserCredentials.createFromSettings( PresetCredentials.AccessGranted1 ) } );
     
         // client software certificates
         if( isDefined( args.ClientSoftwareCertificates ) ) {
@@ -99,7 +117,12 @@ function ActivateSessionService() {
             if ( read.Execute( { NodesToRead: [ sessionItem, sessionNodeClass ], TimestampsToReturn:TimestampsToReturn.Server, OperationResults: opResults } ) ) {
                 if( read.Response.Results[0].StatusCode.isGood() ) {
                     var qnValue = read.Response.Results[0].Value.toQualifiedName().Name;
-                    if( read.Response.Results[0].StatusCode.isGood() ) if( !Assert.Equal( sessionName, qnValue, "SessionName is not as specified" ) ) result = false;
+                    if( read.Response.Results[0].StatusCode.isGood() ) {
+                        if( sessionName.length == 0 && qnValue.length == 0 ) {
+                            addError( "Server did not create a SessionName for the Client." );
+                            result = false;
+                        }
+                    }
                     if( read.Response.Results[1].StatusCode.isGood() ) if( !Assert.Equal( NodeClass.Object, read.Response.Results[1].Value.toInt32(), "NodeClass of the session node is not Object" ) ) result = false;
                 }
                 else _warning.store( "Session diagnostics not available; probably not supported." );

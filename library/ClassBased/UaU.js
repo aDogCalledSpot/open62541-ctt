@@ -29,6 +29,7 @@ UaUserIdentityToken.FromUserCredentials = function( args ) {
     if( !isDefined( args ) ) throw( "UaUserIdentityToken.FromUserCredentials() args not specified." );
     if( !isDefined( args.Session ) ) throw( "UaUserIdentityToken.FromUserCredentials() Session not specified." );
     if( !isDefined( args.UserCredentials ) ) throw( "UaUserIdentityToken.FromUserCredentials() UserCredentials not specified." );
+    if( !isDefined( args.CertificateSetting ) ) args.CertificateSetting = UserCertificateSetting.Trusted;
     var userIdToken = null;
     switch ( args.UserCredentials.Policy ) {
         case UserTokenType.Anonymous: 
@@ -48,7 +49,7 @@ UaUserIdentityToken.FromUserCredentials = function( args ) {
             userIdToken.setUserNameIdentityToken( tmp );
             break;
         case UserTokenType.Certificate:
-            userIdToken = buildUserX509IdentityToken( args.Session.Session );
+            userIdToken = buildUserX509IdentityToken( args.Session.Session, args.CertificateSetting, args.PolicyId );
             break;
         case UserTokenType.IssuedToken:
             throw( "UserTokenType.IssuedToken NOT YET SUPPORTED in the UACTT." );

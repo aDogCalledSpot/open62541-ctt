@@ -11,11 +11,10 @@ Test.Execute( { Procedure: function test() {
     addLog( "Registering the same node " + maxLength + " times" );
     var request = CreateDefaultRegisterNodesRequest( Test.Session.Session );
     var response = new UaRegisterNodesResponse();
-    var nodeToRegister = UaNodeId.fromString( Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.NumericSettings );
+    var nodeToRegister = MonitoredItem.fromSettings( Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings )[0];
     // add the node multiple times
-    for( var i = 0; i < maxLength; i++ ) {
-        request.NodesToRegister[i] = nodeToRegister;
-    }
+    for( var i = 0; i < maxLength; i++ ) request.NodesToRegister[i] = nodeToRegister.NodeId;
+    // invoke the call
     var uaStatus = Test.Session.Session.registerNodes( request, response );
     if( uaStatus.isGood() ) {
         assertRegisterNodesSuccess( Test.Session.Session, request, response );

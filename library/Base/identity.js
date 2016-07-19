@@ -1,6 +1,26 @@
 include( "./library/Base/connectChannel.js" );
 include( "./library/Base/Objects/securityalgorithms.js" );
 
+var UserCertificateSetting = {
+    Trusted:     0,
+    Untrusted:   1,
+    NotYetValid: 2,
+    Expired:     4,
+    Issued:      8,
+    Revoked:     16,
+    ApplicationInstanceCertificate: 32,
+    Invalid:     64
+};
+UserCertificateSetting.toString = function( byteValue ) {
+    var s = "";
+    for( var i in UserCertificateSetting ) {
+        if( ! ( typeof( UserCertificateSetting[i] ) === "function" ) ) {
+            if( UserCertificateSetting[i] & byteValue ) s += s.length > 0? "+" + i : i;
+        }
+    }
+    return( s );
+}
+
 var PresetCredentials = { 
     "AccessGranted1":0,
     "AccessGranted2":1,
@@ -71,7 +91,6 @@ function needAnonymousToken( securityPolicyUri, session ) {
     // the only access policy is anonymous. In these cases the client can't reply with
     // any token.
     // securityPolicyUri - the URI of the security policy
-    const TCPSECURITYPROFILEURI = "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary";
     for( var i=0; i<gServerCapabilities.Endpoints.length; i++ ) { // iterate thru each endpoint
         var description = gServerCapabilities.Endpoints[i];
         if ( description.SecurityPolicyUri == securityPolicyUri ) return ( description.UserIdentityTokens.length != 0 );
@@ -89,7 +108,9 @@ function getUserTokenPolicy( securityPolicyUri, tokenType, session ) {
     if( !isDefined( session ) ) throw( "identity.js::getUserTokenPolicy: no Session defined. Back-track and find out why." );
     for( var i=0; i<gServerCapabilities.Endpoints.length; i++ ) {
         var description = gServerCapabilities.Endpoints[i];
-        if( description.TransportProfileUri === "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary" && description.SecurityPolicyUri == securityPolicyUri ) {
+        if( description.SecurityPolicyUri == securityPolicyUri && 
+            ( description.TransportProfileUri === "http://opcfoundation.org/UA-Profile/Transport/uatcp-uasc-uabinary" ||
+              description.TransportProfileUri === "http://opcfoundation.org/UA-Profile/Transport/https-uabinary" ) ) {
             // store a copy of the endpoint in the "ServerCapabilities" global object/variable.
             gServerCapabilities.ConnectedEndpoint = description;
             // now iterate thru all user endpoint tokens and search for the matching type
@@ -141,12 +162,18 @@ function buildAnonymousIdentityToken( session, overrides ) {
 
 
 /* Creates a UserIdentityToken of type X509.
-   Revision History:
-       2/2/2012 NP: Initial version. */
-function buildUserX509IdentityToken( session ) {
+   Parameters:
+       session
+       setting: for controlling which certificate settings to use
+       PolicyId: */
+function buildUserX509IdentityToken( session, setting, PolicyId ) {
+    // check parameters
+    if( !isDefined( session ) ) throw( "Session not specified in buildUserX509IdentityToken" );
+    if( !isDefined( setting ) ) setting = UserCertificateSetting.Trusted;
+
     var obj = new UaExtensionObject();
     var channelSecurityPolicy = SecurityPolicy.policyToString( session.Channel.RequestedSecurityPolicyUri );
-    
+
     // get the x509 certificate loaded and validated
     // begin with a PKI provider
     var pkiProvider = new UaPkiUtility();
@@ -163,15 +190,31 @@ function buildUserX509IdentityToken( session ) {
     }
     else {
         var userCertificate = new UaByteString();
-        var uaStatus = pkiProvider.loadCertificateFromFile( readSetting( "/Advanced/Certificates/UserCertificate" ), userCertificate );
+        var uaStatus = null;
+        print( "UserX509 certificate for '" + UserCertificateSetting.toString( setting ) + "' requested." );
+        switch( setting ) {
+            case UserCertificateSetting.Trusted:     uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.User, userCertificate ); break;
+            case UserCertificateSetting.Untrusted:   uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertNotTrusted, userCertificate ); break;
+            case UserCertificateSetting.NotYetValid: uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertNotYetValid, userCertificate ); break;
+            case UserCertificateSetting.Expired:     uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertExpired, userCertificate ); break;
+            case UserCertificateSetting.Issued:      uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertIssued, userCertificate ); break;
+            case UserCertificateSetting.Revoked:     uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertRevoked, userCertificate ); break;
+            case UserCertificateSetting.Invalid:     uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.UserCertInvalid, userCertificate ); break;
+            case UserCertificateSetting.ApplicationInstanceCertificate: uaStatus = pkiProvider.loadCertificateFromFile( Settings.Advanced.Certificates.Certificate, userCertificate ); break;
+            default: throw( "Invalid UserCertificateSetting value '" + setting + "' in call to buildUserX509IdentityToken" );
+        }
+
+        if( uaStatus.isBad() ) throw( "Error '" + uaStatus + "' loading UserCertifiate" );
         var token = new UaX509IdentityToken();
+        token.CertificateData = userCertificate;
         token.PolicyId = tokenpolicy.PolicyId;
+        // override the policyId?
+        if( isDefined( PolicyId ) ) token.PolicyId = PolicyId;
         obj.setX509IdentityToken( token );
     }
 
     return obj; 
 }// function buildUserX509IdentityToken( session )
-
 
 
 /* Creates a UserIdentityToken of type UserNamePassword

@@ -45,7 +45,7 @@ function readArray581028( nodeSetting, nodeType ) {
                 }
                 else {
                     // bytestring
-                    lastIndex = valueAsArray.utf8ToString().length - 1;
+                    lastIndex = valueAsArray.toHexString().length / 2 - 2;
                 }
             }
             else {

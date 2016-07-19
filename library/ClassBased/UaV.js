@@ -350,7 +350,7 @@ UaVariant.Increment = function( args ) {
         case BuiltInType.LocalizedText: val.Text = UaDateTime.utcNow().toString();                         break;
         case BuiltInType.NodeId:        val.setNodeId( val.toNodeId() );                                   break;
         case BuiltInType.SByte:         val.setSByte( val.toSByte() + args.Increment );                    break;
-        case BuiltInType.StatusCode:    val.setStatusCode( val.toStatusCode() + args.Increment );          break;
+        case BuiltInType.StatusCode:    val.setStatusCode( new UaStatusCode( Number( val.toStatusCode() ) + args.Increment ) ); break;
         case BuiltInType.String: {
             var stringAsBs = UaByteString.fromStringData( val.toString() );
             stringAsBs = UaByteString.Increment( stringAsBs );
@@ -436,6 +436,7 @@ UaVariant.SetValueMin = function( args ) {
         case BuiltInType.Double:      args.Value.setDouble( Constants.Double_Min );     break;
         case BuiltInType.Duration:    args.Value.setDouble( Constants.Double_Min );     break;
         case BuiltInType.Float:       args.Value.setFloat( Constants.Float_Min );       break;
+        case BuiltInType.Guid:        args.Value.setGuid( new UaGuid() );               break;
         case BuiltInType.Int16:       args.Value.setInt16( Constants.Int16_Min );       break;
         case BuiltInType.Int32:       args.Value.setInt32( Constants.Int32_Min );       break;
         case BuiltInType.Int64:       args.Value.setInt64( 0x8000000000000000 );        break;

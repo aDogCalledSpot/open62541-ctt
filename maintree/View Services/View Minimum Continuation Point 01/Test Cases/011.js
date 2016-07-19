@@ -22,7 +22,7 @@ include("./library/ServiceBased/ViewServiceSet/BrowseNext/referencetype_test.js"
 Test.Execute( { Procedure: function test() {
     var nodeToBrowse = UaNodeId.fromString( readSetting( "/Server Test/NodeIds/References/Has References With Different Parent Types" ).toString() );
     if( nodeToBrowse === undefined || nodeToBrowse === null ) {
-        addSkipped( "[Configuration Issue?] Unable to conduct test. Check setting '/Server Test/NodeIds/References/Has 3 Forward References 1'." );
+        addSkipped( "[Configuration Issue?] Unable to conduct test. Check setting '/Server Test/NodeIds/References/Has References With Different Parent Types'." );
         return( false );
     }
     var referenceTypeId = GetReferenceTypeWithThreeReferences( nodeToBrowse, Test.Session.Session );
@@ -34,7 +34,7 @@ Test.Execute( { Procedure: function test() {
     // get expected references and ensure they're of referenceTypeId or its subtypes
     expectedReferences = GetDefaultReferencesOfTypeFromNodeId( nodeToBrowse, referenceTypeId, true, Test.Session.Session );
     var matchingTypes = [ referenceTypeId ];
-    matchingTypes = matchingTypes.concat( GetReferenceTypeSubtypes( referenceTypeId, Test.Session.Session ) );
+    matchingTypes = matchingTypes.concat( GetReferenceTypeSubtypes( referenceTypeId, undefined, Test.Session.Session ) );
     for( var i = 0; i < expectedReferences.length; i++ ) {
         var foundReference = false;
         for( var j = 0; j < matchingTypes.length; j++ ) {

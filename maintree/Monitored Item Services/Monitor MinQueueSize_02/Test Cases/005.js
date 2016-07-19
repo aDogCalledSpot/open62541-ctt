@@ -83,8 +83,19 @@ Test.Execute( { Procedure: function test() {
                         addError( "Test aborted. SetMonitoringMode failed. Cannot test if the queue was cleared in the server." );
                     }
                     else {
+                        PublishHelper.Execute();
+
+                        // the underlying device might not be ready yet, so the server may respond with BadWaitingForInitialData; if so, allow some more time to pass
+                        if( !PublishHelper.CurrentlyContainsData() && PublishHelper.Response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadWaitingForInitialData ) {
+                            for( var i=0; i<3; i++ ) {
+                                PublishHelper.Execute();
+                                if( PublishHelper.CurrentlyContainsData() ) break;
+                                else if( PublishHelper.Response.ResponseHeader.ServiceResult.StatusCode !== StatusCode.BadWaitingForInitialData ) addError( "Publish returned '" + PublishHelper.Response.ResponseHeader.ServiceResult.StatusCode + "' and no data! " );
+                            }
+                        }
+
                         // call Publish(), we should still have received a single callback yielding value last written.
-                        if( Assert.True( PublishHelper.Execute() && ( PublishHelper.CurrentlyContainsData() ), "Expected Publish to succeed and a single dataChange notification because the monitoringMode was set to Disabled and then Reporting, which should always result in the server sending an \"initial\" data change." ) ) {
+                        if( Assert.True( ( PublishHelper.CurrentlyContainsData() ), "Expected Publish to succeed and a single dataChange notification because the monitoringMode was set to Disabled and then Reporting, which should always result in the server sending an \"initial\" data change." ) ) {
                             // the queue was emptied when setting the monitoring mode to disabled - so just expect 1 value
                             if(Assert.Equal( 1, PublishHelper.CurrentDataChanges[0].MonitoredItems.length, "Expected " + item.QueueSize + " items in dataChange notification messsage." ) ) {
                                 // make sure the the value received matchs the previously written value

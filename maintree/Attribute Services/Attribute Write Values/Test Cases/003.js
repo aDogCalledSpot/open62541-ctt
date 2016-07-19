@@ -2,7 +2,7 @@
     Description: Write to the same node multiple times in the same call. This is done for each core data type: 
             Bool, Byte, SByte, ByteString, DateTime, Decimal, Double, Float, Guid, Int16, UInt16, Int32, UInt32,  Int64, UInt64, String */
 
-function write582004() {
+Test.Execute( { Procedure: function test() {
     var items = MonitoredItem.fromSettings( Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.Settings );
     if( !isDefined( items ) ) { addError( "No Scalar items defined. Check settings. Aborting test." ); return( false ); }
 
@@ -28,19 +28,19 @@ function write582004() {
             values.push( itemsByType[i].Value.Value );
         }
 
-        // second, write the values. Do not verify.
+        // second, write the values. Read them back...
         WriteHelper.Execute( { NodesToWrite: itemsByType, ReadVerification: false } );
+        ReadHelper.Execute( { NodesToRead: itemsByType, TimestampsToReturn: TimestampsToReturn.Server, MaxAge: 0 } );
 
-        //  last, read the original item (since the previous set are just clones of it) and check that 
-        // the value received matches the last one sent.
-        ReadHelper.Execute( { NodesToRead: items[t], TimestampsToReturn: TimestampsToReturn.Server, MaxAge: 0 } );
+        // compare the value received is the same for all values
+        var firstValue = itemsByType[0].Value.Value;
+        Assert.ValueInValues( firstValue, values, "Expected a value that was previously written." );
 
-        // compare the value received vs. last value sent 
-        Assert.ValueInValues( items[t].Value.Value, values, 
-                              "Item '" + items[t].NodeId + "' (setting: " + items[t].NodeSetting + ") Value: " + items[t].Value.Value + "; expecting one of the values previously written: " + values + ".",
-                              "Item '" + items[t].NodeId + "' returned a value (" + items[t].Value.Value + ") that matched one of the values written: " + values + "." );
+        addLog( "Checking that all returned values match: " + firstValue );
+        for( var i=1; i<ReadHelper.Response.Results.length; i++ ) {
+            if( !firstValue.equals( ReadHelper.Response.Results[i].Value ) ) addError( "Read.Response.Results[" + i + "].Value mismatch." );
+        }//for i...
+
     }
     return( true );
-}// function write582004() 
-
-Test.Execute( { Procedure: write582004 } );
+} } );

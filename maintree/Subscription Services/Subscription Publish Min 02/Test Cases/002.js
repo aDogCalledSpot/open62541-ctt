@@ -21,7 +21,7 @@ print("*********************************************************");
             if( response.ResponseHeader.ServiceResult.StatusCode === StatusCode.BadNoSubscription ) addLog( "Publish(#1).Response.ServiceResult is Bad_NoSubscription; which is acceptable." );
             else {
                 if( Assert.Equal( StatusCode.Good, response.ResponseHeader.ServiceResult.StatusCode, "Publish(#1).Response.ServiceResult is not Good or Bad_NoSubscription, which are the codes expected. Received: " + response.ResponseHeader.ServiceResult.StatusCode ) ) {
-                    var dataChange = response.ResponseHeader.NotificationMessage.NotificationData.toDataChangeNotification();
+                    var dataChange = response.ResponseHeader.NotificationMessage.NotificationData[0].toDataChangeNotification();
                     Assert.True( isDefined( dataChange ), "Publish(#1).Response.NotificationMessage does not contain a data-change notification, which was expected because the server did not report that the subscription is deleted yet." );
                 }
             }

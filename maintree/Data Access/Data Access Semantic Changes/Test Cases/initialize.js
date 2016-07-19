@@ -29,6 +29,11 @@ if( !( isDefined( multiStateItems ) && isDefined( multiStateItems.length ) && mu
     multiStateItems = null;
 }
 
+var analogArrayItems = MonitoredItem.fromSettings( Settings.ServerTest.NodeIds.Static.DAProfile.AnalogTypeArrays.Settings );
+if( !( isDefined( analogArrayItems ) && isDefined( analogArrayItems.length ) && analogArrayItems.length !== 0 ) ) {
+    analogArrayItems = null;
+}
+
 var defaultSubscription;
 if( analogItems === null && twoStateItems === null && multiStateItems === null ) { 
     addSkipped( SETTING_UNDEFINED_DAANALOG );
@@ -44,6 +49,7 @@ else {
     var allItems = analogItems;
     if( isDefined( twoStateItems ) ) allItems.concat( twoStateItems );
     if( isDefined( multiStateItems ) )allItems.concat( multiStateItems );
+    if( isDefined( analogArrayItems ) )allItems.concat( analogArrayItems );
     if( ReadHelper.Execute( { NodesToRead: allItems } ) ) for( var i=0; i<allItems.length; i++ ) allItems[i].OriginalValue = allItems[i].Value.Value.clone();
 
     // create a subscription that can be used for all tests in this Conformance Unit.

@@ -9,7 +9,7 @@
 function register574001() {
     var item = MonitoredItem.fromSettings( Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.NumericSettings )[0];
     if( item === undefined || item === null ) {
-        addError( "Unable to perform test. No numeric nodes configured for testing." );
+        addSkipped( "Unable to perform test. No numeric nodes configured for testing." );
         return( false );
     }
     TestRegisterNodes( Test.Session.Session, [ item.NodeId ], 0 );

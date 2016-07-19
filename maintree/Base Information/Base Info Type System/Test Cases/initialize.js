@@ -5,6 +5,8 @@ include( "./library/Information/_Base/NodeIsOfCompliantType.js" );
 include( "./library/ServiceBased/ViewServiceSet/TranslateBrowsePathsToNodeIds.js" );
 include( "./library/Information/NodeSet2.xml/NodeVerification.js" );
 
+var _rootNode              = MonitoredItem.fromNodeIds( new UaNodeId( Identifier.RootFolder ) )[0];
+
 // Connect to the server
 if( !Test.Connect() ) {
     addError( "Unable to connect and establish a session");

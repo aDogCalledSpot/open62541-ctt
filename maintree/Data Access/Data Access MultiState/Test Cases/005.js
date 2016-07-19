@@ -33,12 +33,17 @@ function subscription65005() {
                 for( var i=0; i<5; i++ ) {
                     // set the new values
                     for( var m=0; m<PublishHelper.CurrentDataChanges[0].MonitoredItems.length; m++ ) {
-                        var initialValue = UaVariantToSimpleType( PublishHelper.CurrentDataChanges[0].MonitoredItems[m].Value.Value );
-                        var newValue = initialValue === 0? 1: 0;
-                        addLog( "Setting initial value for Node '" + Items[m].NodeSetting +
-                            "' to value: '" + newValue + "'; the initial reading was: '" + initialValue + "'" );
-                        Items[m].SafelySetValueTypeKnown( newValue, Items[m].Value.Value.DataType );
-                        Items[m].InitialState = initialValue;
+                        // search the item with the matching ClientHandle
+                        for( j=0; j<Items.length; j++ ) {
+                            if( PublishHelper.CurrentDataChanges[0].MonitoredItems[m].ClientHandle == Items[j].ClientHandle ) {
+                                var initialValue = UaVariantToSimpleType( PublishHelper.CurrentDataChanges[0].MonitoredItems[m].Value.Value );
+                                var newValue = initialValue === 0? 1: 0;
+                                addLog( "Setting initial value for Node '" + Items[j].NodeSetting +
+                                    "' to value: '" + newValue + "'; the initial reading was: '" + initialValue + "'" );
+                                Items[j].SafelySetValueTypeKnown( newValue, Items[j].Value.Value.DataType );
+                                Items[j].InitialState = initialValue;
+                            }
+                        }
                     }
 
                     if( WriteHelper.Execute( { NodesToWrite: Items } ) ) {
@@ -54,7 +59,14 @@ function subscription65005() {
                                     // we expect the data-type to be a UInteger (according to UA Spec part 8: Table 5.
                                     Assert.True( IsUInteger( { Value: Items[i].Value.Value } ), "Data Type of .Value attribute should be UInteger, but is: " + BuiltInType.toString( Items[i].Value.Value.DataType ) );
                                     var writeVal =  Items[r].Value.Value.toUInt32();
-                                    var readVal = PublishHelper.CurrentDataChanges[0].MonitoredItems[r].Value.Value.toUInt32();
+                                    var readVal;
+                                    // Find the item with matching ClientHandle
+                                    for( var j=0; j<PublishHelper.CurrentDataChanges[0].MonitoredItems.length; j++ ) {
+                                        if( PublishHelper.CurrentDataChanges[0].MonitoredItems[j].ClientHandle == Items[r].ClientHandle ) {
+                                            readVal = PublishHelper.CurrentDataChanges[0].MonitoredItems[j].Value.Value.toUInt32();
+                                            break;
+                                        }
+                                    }
                                     Assert.Equal( writeVal, readVal, "Expected to receive the same value we previously wrote!" ); 
                                 }// for r...
                             }// currently contains data

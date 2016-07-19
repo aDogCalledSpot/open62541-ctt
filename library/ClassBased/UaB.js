@@ -1,5 +1,6 @@
 /* Includes: 
     UaBrowsePath.New()
+    BuiltInType.FromNodeId()        : Converts a NodeId into its corresponding BuiltInType
     UaByteString.FromByteArray()    : Converts a Byte[] to a ByteString
     UaByteString.Increment()        : Increments the numeric value of a ByteString by one
     UaByteString.ToByteArray()      : Converts a ByteString to a Byte[]
@@ -7,9 +8,9 @@
 
 /* returns a UaBrowsePath object
     Parameters:
-        RelativePath: 
-        RelativePathStrings: 
-        StartingNode: 
+        RelativePath [RelativePath]: 
+        RelativePathStrings [string[]]: 
+        StartingNode [NodeId]: 
         TargetName: */
 UaBrowsePath.New = function( args ) {
     var uabp = new UaBrowsePath();
@@ -40,6 +41,34 @@ UaBrowsePath.New = function( args ) {
     }
     return( uabp );
 }// this.GetUaBrowsePath = function( args )
+
+// Searches an array of UaBrowseResult objects for anything that matches
+// the search criteria.
+// Parameters:
+//    - BrowseName [string]: 
+//    - Results [UaBrowseResults]: 
+UaBrowseResults.Find = function( args ) {
+    var matches = [];
+    if( isDefined( args ) && isDefined( args.Results ) && isDefined( args.Results.length ) ) {
+        for( var i=0; i<args.Results.length; i++ ) {
+            for( var r=0; r<args.Results[i].References.length; r++ ) {
+                var isMatch = false;
+                if( isDefined( args.BrowseName ) && args.Results[i].References[r].BrowseName.Name == args.BrowseName ) isMatch = true;
+                if( isMatch ) matches.push( args.Results[i].References[r].clone() );
+            }//for r..
+        }//for i..
+    }
+    return( matches );
+}
+
+BuiltInType.FromNodeId = function( nodeid ) {
+    if( nodeid !== undefined && nodeid !== null ) {
+        for( var b in BuiltInType ) {
+            if( nodeid.equals( new UaNodeId( BuiltInType[b] ) ) ) return( BuiltInType[b] );
+        }
+    }
+    return( new UaNodeId() );
+}
 
 UaByteString.FromByteArray = function( bytes ) {
     if( bytes === undefined || bytes === null ) return( new UaByteString() );

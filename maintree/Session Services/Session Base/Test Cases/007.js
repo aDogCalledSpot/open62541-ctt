@@ -8,7 +8,8 @@ function activateSession562004() {
         return( false );
     }
     // check multiple usernames are supported
-    if( readSetting( "/Server Test/Session/LoginNameGranted2" ).toString().toLowerCase() === "n/a" ) {
+    if( readSetting( "/Server Test/Session/LoginNameGranted2" ).toString().toLowerCase() === "n/a"
+        || readSetting( "/Server Test/Session/LoginNameGranted2" ).toString().toLowerCase() === "" ) {
         addSkipped( "Server does not support multiple usernames, therefore skipping test." );
         return( false );
     }

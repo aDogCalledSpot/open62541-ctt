@@ -36,24 +36,26 @@ function setInitialLargeFiletypeValues( items ) {
     }
 }// function captureOriginalValues( items )
 
+// check the fastest support publishingInterval setting
+var fastestPublishingIntervalSupported = gServerCapabilities.FastestPublishIntervalSupported;
+
 var defaultStaticItem = MonitoredItem.fromSettings( Settings.ServerTest.NodeIds.Static.AllProfiles.Scalar.NumericSettings )[0];
-defaultStaticItem.DataType = UaNodeId.GuessType( defaultStaticItem.NodeSetting );
 if( defaultStaticItem == undefined || defaultStaticItem == null ) {
     addSkipped( "Static Scalar (numeric)" );
     stopCurrentUnit();
 }
+else {
+    defaultStaticItem.DataType = UaNodeId.GuessType( defaultStaticItem.NodeSetting );
 
-// check the fastest support publishingInterval setting
-var fastestPublishingIntervalSupported = gServerCapabilities.FastestPublishIntervalSupported;
-
-if( initialize() ) {
-    Test.PostTestFunctions.push( clearPublish );
-    // obtain the current value of our default statis item
-    ReadHelper.Execute( { NodesToRead: defaultStaticItem } );
-    // clone the value
-    defaultStaticItem.OriginalValue = defaultStaticItem.Value.Value.clone();
+    if( initialize() ) {
+        Test.PostTestFunctions.push( clearPublish );
+        // obtain the current value of our default statis item
+        ReadHelper.Execute( { NodesToRead: defaultStaticItem } );
+        // clone the value
+        defaultStaticItem.OriginalValue = defaultStaticItem.Value.Value.clone();
+    }
+    else stopCurrentUnit();
 }
-else stopCurrentUnit();
 
 // after each test, lets Reset the PublishHelper
 function clearPublish() {

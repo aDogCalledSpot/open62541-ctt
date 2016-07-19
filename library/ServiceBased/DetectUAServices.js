@@ -69,7 +69,7 @@ UAServicesDetection = {
             return( result ); },
         TranslateBrowsePathsToNodeIds: function( args ) { 
             var result = TestResult.Implemented;
-            TranslateBrowsePathsToNodeIdsHelper.Execute( { NodeIds: [ MonitoredItem.fromNodeIds( [ UaNodeId( Identifier.RootFolder ) ] )[0] ], BrowsePaths: [ "/" ], ServiceResult: expectedServiceResults, SuppressMessaging: true, SuppressWarnings: true } );
+            TranslateBrowsePathsToNodeIdsHelper.Execute( { NodeIds: [ MonitoredItem.fromNodeIds( [ UaNodeId( Identifier.RootFolder ) ] )[0] ], BrowsePaths: [ "Objects" ], ServiceResult: expectedServiceResults, SuppressMessaging: true, SuppressWarnings: true } );
             if( expectedServiceResults.containsExpectedStatus( TranslateBrowsePathsToNodeIdsHelper.Response.ResponseHeader.ServiceResult ) ) result = TestResult.NotImplemented;
             return( result ); },
         RegisteredNodes: function( args ) { 
@@ -112,7 +112,7 @@ UAServicesDetection = {
                     HistoryReadDetails: UaReadRawModifiedDetails.New( { IsReadModified: false, StartTime: UaDateTime.utcNow(), EndTime: UaDateTime.utcNow(), NumValuesPerNode: 0, ReturnBounds: true } ),
                     ReleaseContinuationPoints: true, SuppressMessaging: true, SuppressWarnings: true, SuppressErrors: true, 
                     ServiceResult: expectedServiceResults, 
-                    OperationResults: new ExpectedAndAcceptedResults( [ StatusCode.BadNotReadable, StatusCode.BadContinuationPointInvalid ] ) } );
+                    OperationResults: new ExpectedAndAcceptedResults( [ StatusCode.BadNotReadable, StatusCode.BadContinuationPointInvalid, StatusCode.BadHistoryOperationUnsupported ] ) } );
             if( expectedServiceResults.containsExpectedStatus( HistoryReadHelper.Response.ResponseHeader.ServiceResult ) ) result = TestResult.NotImplemented;
             return( result ); },
         Write: function( args ) { 

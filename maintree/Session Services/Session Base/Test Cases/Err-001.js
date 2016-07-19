@@ -23,7 +23,7 @@ function createSession561Err001() {
                     var session1Nonce = session.Request.ClientNonce;
                     var session2 = new CreateSessionService( { Channel: Test.Channel } );
                     if( session2.Execute( { ServiceResult: new ExpectedAndAcceptedResults( [ StatusCode.BadNonceInvalid, StatusCode.Good ] ), ClientNonce: session1Nonce } ) ) {
-                        CloseSessionHelper.Execute( { Session: session2, ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadSessionNotActivated ) } );
+                        CloseSessionHelper.Execute( { Session: session2, ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadSessionNotActivated, StatusCode.BadSessionIdInvalid ) } );
                     }
                     CloseSessionHelper.Execute( { Session: session } ); // close session #1
                 }

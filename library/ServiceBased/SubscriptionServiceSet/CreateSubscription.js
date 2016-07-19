@@ -31,7 +31,6 @@ function CreateSubscriptionService( args ) {
         if( isDefined( args.RequestedLifetimeCount ) ){ args.Subscription.LifetimeCount = args.RequestedLifetimeCount; }
         if( isDefined( args.RequestedPublishingInterval ) ){ args.Subscription.PublishingInterval = args.RequestedPublishingInterval; }
         if( isDefined( args.RequestedMaxKeepAliveCount ) ) { args.Subscription.MaxKeepAliveCount = args.RequestedMaxKeepAliveCount; }
-        if( !isDefined( args.SuppressMessaging ) ) args.SuppressMessaging = false;
 
         ServiceRegister.Register( { Service: ServiceRegister.UaService( { Name: this.Name, Available: true, Tested: true } ) } );
 
@@ -87,14 +86,14 @@ function createSubscriptionDeprecated( Subscription, Session, expectedErrors, su
     var defaultTimeoutHintSettingValue = readSetting( "/Server Test/Session/DefaultTimeoutHint" ).toString();
     subscriptionReq.RequestHeader.TimeoutHint = parseInt( defaultTimeoutHintSettingValue );
 
-    if( !suppressMessaging ) print( "\tCreateSubscription Requested Parameters:" +
-        "\n\t\tDefaultTimeoutHint: " + subscriptionReq.RequestHeader.TimeoutHint +
-        "\n\t\tPublishingInterval: " + subscriptionReq.RequestedPublishingInterval +
-        "\n\t\tLifetimeCount: " + subscriptionReq.RequestedLifetimeCount +
-        "\n\t\tMaxKeepAliveCount: " + subscriptionReq.RequestedMaxKeepAliveCount +
-        "\n\t\tPublishingEnabled: " + subscriptionReq.PublishingEnabled +
-        "\n\t\tPriority: " + subscriptionReq.Priority +
-        "\n\t\tMaxNotificationsPerPublish: " + subscriptionReq.MaxNotificationsPerPublish );
+    if( !suppressMessaging ) print( "CreateSubscription Requested Parameters:" +
+        "\n\tDefaultTimeoutHint: " + subscriptionReq.RequestHeader.TimeoutHint +
+        "\n\tPublishingInterval: " + subscriptionReq.RequestedPublishingInterval +
+        "\n\tLifetimeCount: " + subscriptionReq.RequestedLifetimeCount +
+        "\n\tMaxKeepAliveCount: " + subscriptionReq.RequestedMaxKeepAliveCount +
+        "\n\tPublishingEnabled: " + subscriptionReq.PublishingEnabled +
+        "\n\tPriority: " + subscriptionReq.Priority +
+        "\n\tMaxNotificationsPerPublish: " + subscriptionReq.MaxNotificationsPerPublish );
 
     var uaStatus = session.createSubscription( subscriptionReq, subscriptionRes );
     Subscription.ServiceResult = subscriptionRes.ResponseHeader.ServiceResult;
@@ -117,10 +116,10 @@ function createSubscriptionDeprecated( Subscription, Session, expectedErrors, su
                 //calculate the "TimeoutHint" and store in the Subscription object
                 Subscription.TimeoutHint = 2 * ( Subscription.RevisedPublishingInterval * Subscription.RevisedMaxKeepAliveCount );
     
-                if( !suppressMessaging ) print( "\tCreateSubscription Revised Parameters:" +
-                    "\n\t\tRevisedPublishingInterval: " + Subscription.RevisedPublishingInterval +
-                    "\n\t\tRevisedLifetimeCount: "      + Subscription.RevisedLifetimeCount +
-                    "\n\t\tRevisedMaxKeepAliveCount: "  + Subscription.RevisedMaxKeepAliveCount );
+                if( !suppressMessaging ) print( "CreateSubscription Revised Parameters:" +
+                    "\n\tRevisedPublishingInterval: " + Subscription.RevisedPublishingInterval +
+                    "\n\tRevisedLifetimeCount: "      + Subscription.RevisedLifetimeCount +
+                    "\n\tRevisedMaxKeepAliveCount: "  + Subscription.RevisedMaxKeepAliveCount );
             }
         }
     }

@@ -7,7 +7,7 @@ function TestBrowseNextOperationErrorDiagnosticMask( Session, returnDiagnosticMa
     request.RequestHeader.ReturnDiagnostics = returnDiagnosticMask;
     var uaStatus = Session.browseNext( request, response );
     // check result
-    if( uaStatus.isGood() ) UaResponseHeader.IsValid( { Service: { Name: "BrowseNext", Request: request, Response: response }, ServiceResult: new ExpectedAndAcceptedResults( StatusCode.BadContinuationPointInvalid ) } );
+    if( uaStatus.isGood() ) UaResponseHeader.IsValid( { Service: { Name: "BrowseNext", Request: request, Response: response }, OperationResults: new ExpectedAndAcceptedResults( StatusCode.BadContinuationPointInvalid ) } );
     else addError( "BrowseNext() status " + uaStatus, uaStatus );
 }
 

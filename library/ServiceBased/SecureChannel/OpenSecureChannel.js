@@ -18,8 +18,8 @@ function OpenSecureChannelService( args ) {
         // setup the certificate handling
         var pkiProvider = new UaPkiUtility();    // we need this pki provider object to load PKI certificates with
         pkiProvider.PkiType = isDefined( args.PkiType )? args.PkiType : PkiType.OpenSSL;
-        pkiProvider.CertificateRevocationListLocation  = isDefined( args.CertificateRevocationListLocation )? args.CertificateRevocationListLocation : readSetting( "/Advanced/Certificates/CertificateTrustListLocation" );
-        pkiProvider.CertificateTrustListLocation       = isDefined( args.CertificateTrustListLocation )?      args.CertificateTrustListLocation :      readSetting( "/Advanced/Certificates/CertificateRevocationListLocation" );
+        pkiProvider.CertificateRevocationListLocation  = isDefined( args.CertificateRevocationListLocation )? args.CertificateRevocationListLocation : readSetting( "/Advanced/Certificates/CertificateRevocationListLocation" );
+        pkiProvider.CertificateTrustListLocation       = isDefined( args.CertificateTrustListLocation )?      args.CertificateTrustListLocation :      readSetting( "/Advanced/Certificates/CertificateTrustListLocation" );
         this.Channel.CertificateRevocationListLocation = pkiProvider.CertificateRevocationListLocation;
         this.Channel.CertificateTrustListLocation      = pkiProvider.CertificateTrustListLocation;
         // setup all other details
